@@ -329,3 +329,16 @@
         margin: auto; /* Centres content on mobile only */
     }
 }
+
+/* Inline Buttons - place buttons next to each other */
+.btn-inline .et_pb_button_module_wrapper{
+    display: inline-block;
+}
+.btn-inline-center .et_pb_button_module_wrapper{
+    display: inline-block;
+    text-align: center !important;
+}
+.btn-inline-right .et_pb_button_module_wrapper{
+    display: inline-block;
+    text-align: right !important;
+}
