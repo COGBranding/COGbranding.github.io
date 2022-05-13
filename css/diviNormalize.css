@@ -6,8 +6,14 @@
 .et_pb_fullwidth_section .et_pb_title_featured_container{
     width: var(--desktop-width);
     max-width: 1920px;
+}
 
-    @media (max-width: 980px){
+@media (max-width: 980px){
+    .container,
+    .et_pb_row,
+    .et_pb_slider .et_pb_container,
+    .et_pb_fullwidth_section .et_pb_title_container,
+    .et_pb_fullwidth_section .et_pb_title_featured_container{
         width: var(--mobile-width);
     }
 }
