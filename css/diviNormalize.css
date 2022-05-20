@@ -168,7 +168,7 @@
 
 /* Colour - Page Background */
 #main-content{
-    background: var(--site-background);
+    background: var(--site-background) !important;
 }
 
 /* Override Divi's default section & row padding */
