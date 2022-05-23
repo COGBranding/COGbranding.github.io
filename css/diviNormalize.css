@@ -348,3 +348,8 @@
     display: inline-block;
     text-align: right !important;
 }
+.btn-inline .btn.first,
+.btn-inline-center .btn-first,
+.btn-inline-right .btn-first {
+    margin-right: 20px;
+}
