@@ -1,1 +1,2 @@
-console.log("diviFunction is working");
+const test = "diviFunction is working";
+console.log(test);
