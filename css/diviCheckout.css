@@ -44,6 +44,9 @@ a.button.wc-backward{
     height: 50px;
     border-radius: 0 !important;
 }
+form.checkout_coupon button.button{
+    height: 40px !important;
+}
 a.checkout-button,
 a.button.wc-backward{
     background-color: var(--success) !important;
