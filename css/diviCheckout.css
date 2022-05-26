@@ -1,5 +1,11 @@
-.woocommerce-cart .main_title{
+.woocommerce-cart #main-content .container{
+    padding-top: 30px !important;
+    padding-bottom: 0 !important;
+}
+
+.woocommerce-cart .main_title h1{
     font-size: 3rem;
+    padding-bottom: 0;
 }
 
 .woocommerce-cart table.cart img,
@@ -7,7 +13,8 @@
     width: 64px !important;
 }
 
-.woocommerce-cart table.cart td{
+.woocommerce-cart table.cart td,
+.woocommerce-cart table.cart th{
     font-size: 1rem !important;
 }
 
@@ -15,8 +22,13 @@
     height: 50px !important;
 }
 
+.woocommerce-cart input.qty{
+    padding: 8px !important;
+}
+
 .woocommerce-cart button.button,
-a.checkout-button{
+a.checkout-button,
+a.button.wc-backward{
     font-size: 1rem !important;
     background-color: var(--success-l1) !important;
     border: 1px solid var(--success-l2) !important;
@@ -25,28 +37,52 @@ a.checkout-button{
     height: 50px;
     border-radius: 0 !important;
 }
-a.checkout-button{
+a.checkout-button,
+a.button.wc-backward{
     background-color: var(--success) !important;
     border-color: var(--success) !important;
     color: #fff !important;
     padding: 12px 24px !important;
     height: unset !important;
 }
-a.checkout-button:hover{
+a.checkout-button:hover,
+a.button.wc-backward:hover{
     padding: 12px 24px !important;
     opacity: 0.75;
 }
 .woocommerce-cart button.button:hover,
-a.checkout-button:hover{
+a.checkout-button:hover,
+a.button.wc-backward:hover{
     background-color: var(--success) !important;
     border-color: var(--success) !important;
     color: #fff !important;
 }
 .woocommerce-cart button.button:after,
-a.checkout-button:after{
+a.checkout-button:after,
+a.button.wc-backward:after{
     display: none !important;
 }
 
 .woocommerce-cart .cart_totals h2{
     font-size: 2rem;
+}
+
+.woocommerce-cart .woocommerce-message{
+    background: var(--success-l1) !important;
+    border: 1px solid var(--success-l2) !important;
+    color: var(--success) !important;
+    font-size: 1rem !important;
+}
+
+p.cart-empty.woocommerce-info{
+    background: var(--alert-l1) !important;
+    border: 1px solid var(--alert-l2) !important;
+    color: var(--alert) !important;
+    font-size: 1rem !important;
+}
+
+@media (min-width: 769px){
+    th.product-remove, th.product-thumbnail, th.product-name, th.product-price, th.product-quantity, th.product-subtotal{
+        display: none;
+    }
 }
