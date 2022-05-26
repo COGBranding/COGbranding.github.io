@@ -1,0 +1,48 @@
+.woocommerce-cart .main_title{
+    font-size: 3rem;
+}
+
+.woocommerce-cart table.cart img,
+.woocommerce-checkout table.cart img{
+    width: 64px !important;
+}
+
+.woocommerce-cart table.cart td{
+    font-size: 1rem !important;
+}
+
+.woocommerce-cart .coupon .input-text{
+    height: 50px !important;
+}
+
+.woocommerce-cart button.button,
+a.checkout-button{
+    font-size: 1rem !important;
+    background-color: var(--success-l1) !important;
+    border: 1px solid var(--success-l2) !important;
+    color: var(--success) !important;
+    padding: 0 24px !important;
+    height: 50px;
+    border-radius: 0 !important;
+}
+a.checkout-button{
+    padding: 12px 24px !important;
+    height: unset !important;
+}
+a.checkout-button:hover{
+    padding: 12px 24px !important;
+}
+.woocommerce-cart button.button:hover,
+a.checkout-button:hover{
+    background-color: var(--success) !important;
+    border-color: var(--success) !important;
+    color: #fff !important;
+}
+.woocommerce-cart button.button:after,
+a.checkout-button:after{
+    display: none !important;
+}
+
+.woocommerce-cart .cart_totals h2{
+    font-size: 2rem;
+}
