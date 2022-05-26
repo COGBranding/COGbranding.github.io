@@ -402,3 +402,21 @@
     margin-right: 20px;
     margin-bottom: -16px !important;
 }
+
+/* Legal Pages */
+.legal{
+    max-width: 800px;
+}
+.legal h2{
+    font-size: 1.25rem;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+.legal h2:first-child{
+    margin-top: 40px;
+}
+.legal p{
+    font-size: 1rem;
+    line-height: 1.7;
+    padding-bottom: 1.25em;
+}
