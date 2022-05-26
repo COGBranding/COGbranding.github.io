@@ -67,6 +67,10 @@ a.button.wc-backward:after{
     font-size: 2rem;
 }
 
+.woocommerce-cart .entry-content table:not(.variations){
+    border: none;
+}
+
 .woocommerce-cart .woocommerce-message{
     background: var(--success-l1) !important;
     border: 1px solid var(--success-l2) !important;
