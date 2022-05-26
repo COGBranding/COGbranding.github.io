@@ -1,11 +1,13 @@
 .woocommerce-cart #main-content .container,
-.woocommerce-checkout #main-content .container{
+.woocommerce-checkout #main-content .container,
+.woocommerce-account #main-content .container{
     padding-top: 30px !important;
     padding-bottom: 0 !important;
 }
 
 .woocommerce-cart .main_title h1,
-.woocommerce-checkout h1{
+.woocommerce-checkout h1,
+.woocommerce-account h1{
     font-size: 3rem !important;
     padding-bottom: 0 !important;
 }
