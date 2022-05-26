@@ -26,11 +26,15 @@ a.checkout-button{
     border-radius: 0 !important;
 }
 a.checkout-button{
+    background-color: var(--success) !important;
+    border-color: var(--success) !important;
+    color: #fff !important;
     padding: 12px 24px !important;
     height: unset !important;
 }
 a.checkout-button:hover{
     padding: 12px 24px !important;
+    opacity: 0.75;
 }
 .woocommerce-cart button.button:hover,
 a.checkout-button:hover{
