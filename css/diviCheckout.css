@@ -47,6 +47,11 @@ a.button.wc-backward{
 form.checkout_coupon button.button{
     height: 40px !important;
 }
+@media (max-width: 479px){
+    form.checkout_coupon button.button{
+        width: 100% !important;
+    }
+}
 a.checkout-button,
 a.button.wc-backward{
     background-color: var(--success) !important;
