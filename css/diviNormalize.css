@@ -404,14 +404,13 @@
 .btn-inline .btn.first,
 .btn-inline-center .btn-first,
 .btn-inline-right .btn-first {
-    margin-right: 20px;
     margin-bottom: -16px !important;
 }
-@media (max-width: 767px){
+@media (min-width: 768px){
     .btn-inline .btn-first,
     .btn-inline-center .btn-first,
     .btn-inline-right .btn-first{
-        margin-right: 0;
+        margin-right: 20px;
     }
 }
 
