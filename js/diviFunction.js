@@ -9,7 +9,7 @@ function currentYear() {
 // Phone Icon in Menu
 
 function menuPhone(phone_num) {
-    let div = document.createElement("li");
+    let div = document.createElement("div");
     div.classList.add("menu-item", "phone-icon");
     let phoneIcon = '<a href="tel:' + phone_num + '"></a>';
     div.innerHTML = phoneIcon;
