@@ -20,8 +20,7 @@ function menuCart() {
             ) + document.getElementsByClassName("menu-cart-info").before(div);
     } else {
         // Add the account icon to the end of the desktop menu
-        let lastMenuItem =
-            document.getElementById("top-menu").lastChild.innerHTML;
+        let lastMenuItem = document.getElementById("top-menu").lastChild;
         lastMenuItem.after(div);
     }
 }
