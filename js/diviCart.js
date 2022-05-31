@@ -1,1 +1,27 @@
-//
+const testCart = "diviCart is working";
+console.log(testCart);
+
+// Prepend Account/ Cart Icon
+let div = document.createElement("li");
+div.classList.add("menu-item", "account-icon");
+let accountIcon = '<a href="/my-account"></a>';
+div.innerHTML = accountIcon;
+
+function menuCart() {
+    // For tablets and smaller devices, add the account and cart icons
+    if (window.innerWidth <= 980) {
+        document
+            .getElementById("et_mobile_nav_menu")
+            .prepend(
+                document
+                    .getElementsByClassName("menu-cart-info")
+                    .parent()
+                    .html()
+            ) + document.getElementsByClassName("menu-cart-info").before(div);
+    } else {
+        // Add the account icon to the end of the desktop menu
+        let lastMenuItem =
+            document.getElementById("top-menu").lastChild.innerHTML;
+        lastMenuItem.after(div);
+    }
+}
