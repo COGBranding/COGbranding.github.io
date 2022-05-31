@@ -7,11 +7,11 @@ function currentYear() {
 }
 
 // Phone Icon in Menu
-let div = document.createElement("li");
-div.classList.add("menu-item", "phone-icon");
-let phoneIcon = '<a href="#"></a>';
-div.innerHTML = phoneIcon;
 
-function menuPhone() {
+function menuPhone(phone_num) {
+    let div = document.createElement("li");
+    div.classList.add("menu-item", "phone-icon");
+    let phoneIcon = '<a href="tel:' + phone_num + '"></a>';
+    div.innerHTML = phoneIcon;
     document.getElementById("et_mobile_nav_menu").prepend(div);
 }
