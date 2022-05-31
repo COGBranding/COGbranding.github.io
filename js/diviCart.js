@@ -21,6 +21,7 @@ function menuCart() {
     } else {
         // Add the account icon to the end of the desktop menu
         let lastMenuItem = document.getElementById("top-menu").lastChild;
+        lastMenuItem.classList.add("myAccount");
         lastMenuItem.after(div);
     }
 }
