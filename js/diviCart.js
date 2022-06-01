@@ -13,8 +13,7 @@ function menuCart() {
         document
             .getElementById("et_mobile_nav_menu")
             .prepend(
-                document
-                    .getElementsByClassName("menu-cart-info")
+                document.getElementsByClassName("menu-cart-info")
                     .parent()
                     .html()
             ) + document.getElementsByClassName("menu-cart-info").before(div);
