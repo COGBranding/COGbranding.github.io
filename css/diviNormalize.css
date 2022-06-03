@@ -3,7 +3,8 @@
 .et_pb_row,
 .et_pb_slider .et_pb_container,
 .et_pb_fullwidth_section .et_pb_title_container,
-.et_pb_fullwidth_section .et_pb_title_featured_container {
+.et_pb_fullwidth_section .et_pb_title_featured_container,
+.et-db #et-boc .et-l .et_pb_row {
     width: var(--desktop-width);
     max-width: 1920px;
 }
@@ -14,7 +15,8 @@
     .et_pb_row,
     .et_pb_slider .et_pb_container,
     .et_pb_fullwidth_section .et_pb_title_container,
-    .et_pb_fullwidth_section .et_pb_title_featured_container {
+    .et_pb_fullwidth_section .et_pb_title_featured_container,
+    .et-db #et-boc .et-l .et_pb_row {
         width: var(--mobile-width);
     }
 }
