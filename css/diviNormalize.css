@@ -245,6 +245,30 @@
     text-align: right !important;
 }
 
+@media (min-width: 981px){
+    .ta-l-d{
+        text-align: left !important;
+    }
+    .ta-c-d{
+        text-align: center !important;
+    }
+    .ta-r-d{
+        text-align: right !important;
+    }
+}
+
+@media (max-width: 980px){
+    .ta-l-m{
+        text-align: left !important;
+    }
+    .ta-c-m{
+        text-align: center !important;
+    }
+    .ta-r-m{
+        text-align: right !important;
+    }
+}
+
 
 /* Helper classes - Flex */
 .d-flex {
