@@ -458,5 +458,5 @@
 .menu-item.phone-icon a::after {
     content: "\e090";
     font-family: 'ETmodules';
-    font-size: 24px;
+    font-size: 28px;
 }
