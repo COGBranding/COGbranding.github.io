@@ -23,6 +23,3 @@ function menuCart(site_width, loadPhone='', phone_num='') {
         menuPhone(phone_num);
     }
 }
-
-// Style dropdowns CDN level
-//  Add variables for dropdown (website level)
