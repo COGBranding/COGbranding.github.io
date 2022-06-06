@@ -442,19 +442,21 @@
 }
 
 .menu-item.myAccount a {
-    color: var(--account-icon);
+    color: var(--account-icon) !important;
 }
 
 .menu-item.myAccount a::after {
     content: "\e08a";
     font-family: 'ETmodules';
+    font-size: 24px;
 }
 
 .menu-item.phone-icon a {
-    color: var(--phone-icon);
+    color: var(--phone-icon) !important;
 }
 
 .menu-item.phone-icon a::after {
     content: "\e090";
     font-family: 'ETmodules';
+    font-size: 24px;
 }

@@ -24,9 +24,5 @@ function menuCart(site_width, loadPhone='', phone_num='') {
     }
 }
 
-// Style phone icon CDN level
-    // Add variables for colour
-// Style account icon CDN level
-    // Add variables for colour
 // Style dropdowns CDN level
 //  Add variables for dropdown (website level)
