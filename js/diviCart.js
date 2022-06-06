@@ -2,12 +2,14 @@ const testCart = "diviCart is working";
 console.log(testCart);
 
 // Prepend Account/ Cart Icon
-let div = document.createElement("li");
+let div = document.createElement("div");
 div.classList.add("menu-item", "account-icon");
 let accountIcon = '<a href="/my-account"></a>';
 div.innerHTML = accountIcon;
 
-function menuCart(site_width) {
+
+//menuCart(980, 1, 67715231);
+function menuCart(site_width, loadPhone='', phone_num='') {
     // For tablets and smaller devices, add the account and cart icons
     if (window.innerWidth <= site_width) {
         $("#et_mobile_nav_menu").prepend($(".menu-cart-info").parent().html()) + $(".menu-cart-info").before(div);
@@ -17,4 +19,14 @@ function menuCart(site_width) {
         lastMenuItem.classList.add("myAccount");
         lastMenuItem.after(div);
     }
+    if(loadPhone){
+        menuPhone(phone_num);
+    }
 }
+
+// Style phone icon CDN level
+    // Add variables for colour
+// Style account icon CDN level
+    // Add variables for colour
+// Style dropdowns CDN level
+//  Add variables for dropdown (website level)

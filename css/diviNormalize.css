@@ -440,3 +440,21 @@
     line-height: 1.7;
     padding-bottom: 1.25em;
 }
+
+.menu-item.myAccount a {
+    color: var(--account-icon);
+}
+
+.menu-item.myAccount a::after {
+    content: "\e08a";
+    font-family: 'ETmodules';
+}
+
+.menu-item.phone-icon a {
+    color: var(--phone-icon);
+}
+
+.menu-item.phone-icon a::after {
+    content: "\e090";
+    font-family: 'ETmodules';
+}
