@@ -608,6 +608,10 @@ ul.et_mobile_menu li.menu-item-has-children.dt-open>.mobile-toggle::after,
     font-weight: unset;
 }
 
+.header__mobile .et_mobile_menu li li {
+    padding-left: 10px;
+}
+
 .header__mobile .et_mobile_menu li a {
     border-bottom: none;
     padding: 10px 20px;
