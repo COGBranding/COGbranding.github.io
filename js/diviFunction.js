@@ -44,7 +44,6 @@ function mainHeaderStyle() {
   headerStyle.classList.add('header__desktop');
   mobileHeaderStyle.classList.add('header__mobile');
 }
-mainHeaderStyle();
 
 // function divFunction(htmlText, classArray) {
 //     let div = document.createElement("div");
