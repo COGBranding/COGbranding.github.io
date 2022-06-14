@@ -1,0 +1,11 @@
+.appear {
+    transition: all 0.5s;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.appear.inview {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0.3s;
+}
