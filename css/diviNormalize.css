@@ -582,7 +582,11 @@ ul.et_mobile_menu li.menu-item-has-children.dt-open>.mobile-toggle::after,
 }
 
 /* Desktop and Mobile Header Styling */
-.header__desktop nav li ul {
+.header__desktop .nav li ul {
     border-top: none;
     border-radius: 10px;
+}
+
+.header__desktop #top-menu li li a {
+    padding: 3px 10px;
 }
