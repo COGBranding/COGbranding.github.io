@@ -40,7 +40,7 @@ function mobileMenuDropdown() {
 
 function divFunction(htmlText, classArray) {
     let div = document.createElement("div");
-    div.classList.add(classArray);
+    div.classList.add(classArray.split(' '));
     div.innerHTML = htmlText;
     return div;
 }
