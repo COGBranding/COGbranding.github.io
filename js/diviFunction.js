@@ -1,5 +1,4 @@
-const testFunction = "diviFunction is working";
-console.log(testFunction);
+console.log("diviFunction is working");
 
 // Current Year HTML
 function currentYear() {
