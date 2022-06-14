@@ -8,10 +8,13 @@ function currentYear() {
 
 // Phone Icon in Menu
 function menuPhone(phone_num) {
-    let div = document.createElement("div");
-    div.classList.add("menu-item", "phone-icon");
+    // let div = document.createElement("div");
+    // div.classList.add("menu-item", "phone-icon");
     let phoneIcon = '<a href="tel:' + phone_num + '"></a>';
-    div.innerHTML = phoneIcon;
+    // div.innerHTML = phoneIcon;
+    // document.getElementById("et_mobile_nav_menu").prepend(div);
+    classArray = array("menu-item", "phone-icon");
+    div = divFunction(phoneIcon, classArray);
     document.getElementById("et_mobile_nav_menu").prepend(div);
 }
 
@@ -33,4 +36,11 @@ function mobileMenuDropdown() {
                 $(this).parent().removeClass('is-hover');
             })
         });
+}
+
+function divFunction(htmlText, classArray) {
+    let div = document.createElement("div");
+    div.classList.add(classArray);
+    div.innerHTML = htmlText;
+    return div;
 }
