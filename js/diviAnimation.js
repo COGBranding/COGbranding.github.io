@@ -1,9 +1,11 @@
 function sectionReveal() {
-    const diviSection = document.querySelector('.et_pb_section');
-    const appear = document.querySelector('.appear');
+    const diviSection = document.querySelectorAll(".et_pb_section");    
+    const appear = document.querySelector(".appear");
 
-    diviSection.classList.add('appear');
-
+    for (const diviSection of appear) {
+        diviSection.classList.add("appear");
+    }
+    
     const cb = function(entries) {
         entries.forEach(entry => {
             if(entry.isIntersecting){
