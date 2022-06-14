@@ -590,3 +590,25 @@ ul.et_mobile_menu li.menu-item-has-children.dt-open>.mobile-toggle::after,
 .header__desktop #top-menu li li a {
     padding: 3px 10px;
 }
+
+.header__desktop #top-menu li li a:hover {
+    background-color: transparent;
+}
+
+.header__mobile .mobile_menu_bar:before {
+    font-size: 48px;
+}
+
+.header__mobile .et_mobile_menu {
+    padding: 20px;
+    border-top: none;
+}
+
+.header__mobile .et_mobile_menu .menu-item-has-children>a {
+    font-weight: unset;
+}
+
+.header__mobile .et_mobile_menu li a {
+    border-bottom: none;
+    padding: 10px 20px;
+}
