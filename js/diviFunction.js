@@ -13,7 +13,7 @@ function menuPhone(phone_num) {
     let phoneIcon = '<a href="tel:' + phone_num + '"></a>';
     // div.innerHTML = phoneIcon;
     // document.getElementById("et_mobile_nav_menu").prepend(div);
-    classArray = array("menu-item", "phone-icon");
+    classArray = array["menu-item", "phone-icon"];
     div = divFunction(phoneIcon, classArray);
     document.getElementById("et_mobile_nav_menu").prepend(div);
 }
