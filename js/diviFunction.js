@@ -41,8 +41,8 @@ function mobileMenuDropdown() {
 // Main Header Styling
 function mainHeaderStyle() {
   const headerStyle = document.getElementById('et-top-navigation');
-  headerStyle.classList.add('header__desktop');
   const mobileHeaderStyle = document.getElementById('et_mobile_nav_menu');
+  headerStyle.classList.add('header__desktop');
   mobileHeaderStyle.classList.add('header__mobile');
 }
 mainHeaderStyle();
