@@ -158,8 +158,8 @@ form.checkout_coupon p {
 
 .woocommerce form .form-row input.input-text:focus,
 .woocommerce form .form-row textarea:focus {
-    border: 1px solid var(--black-100);
-    transition: all 0.2s ease-in-out;
+    border: 1px solid var(--black-100) !important;
+    transition: all 0.2s ease-in-out !important;
 }
 
 .woocommerce-checkout h3 {
