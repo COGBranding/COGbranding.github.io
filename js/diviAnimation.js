@@ -1,10 +1,9 @@
 function sectionReveal() {
-    const diviSection = document.querySelectorAll(".et_pb_section");    
-    const appear = document.querySelector(".appear");
+    const diviSection = document.querySelectorAll(".et_pb_section");
 
-    for (const diviSection of appear) {
-        diviSection.classList.add("appear");
-    }
+    for (const section of diviSection) {
+        section.classList.add("appear");
+    }    
     
     const cb = function(entries) {
         entries.forEach(entry => {
