@@ -23,3 +23,14 @@ function menuCart(site_width, loadPhone='', phone_num='') {
         menuPhone(phone_num);
     }
 }
+
+// Load Cart Only
+function menuDiviCart(site_width) {
+    //For this screen width, add the cart icon
+    if (window.innerWidth <= site_width) {
+        $("#et_mobile_nav_menu").prepend($(".menu-cart-info").parent().html() + $(".menu-cart-info").before(div));
+    } else {
+        let lastMenuItem = docuement.getElementById("top-menu").lastChild;
+        lastMenuItem.after(div);
+    }
+}
