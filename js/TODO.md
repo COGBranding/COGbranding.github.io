@@ -10,6 +10,6 @@
 ✔️ 10. Dot following cursor (https://dgrees.studio/)
 11. Animated grain background (https://dgrees.studio/works/autonomy-real-estate/)
 12. Divi project category showing total number of posts in it
-13. Divi 404 page
+✔️ 13. Divi 404 page
 14. Divi search results page
 15. Testimonial slider (https://archipro.com.au/)
