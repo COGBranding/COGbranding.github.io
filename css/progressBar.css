@@ -16,5 +16,6 @@
     position:absolute;
     transform:translate3d(-20%,-20%,0);
     transition:transform 2s cubic-bezier(.02,1.23,.79,1.08);
+    z-index: 999999;
   }
   

@@ -14,9 +14,9 @@ function progressBar(){
       window.addEventListener('scroll', fillscrollline);
 }
 
-//create a element with  class "mouse-follow-circle" to create a follower.
-function mouse_follower(selecter_class){
-
+//creates a element with  class "mouse-follow-circle" to create a follower.
+function mouse_follower(){
+    $('html').prepend('<div class="mouse-follow-circle"></div>');
     $(document).on("click mousemove","body",function(e){ 
         var x = e.clientX;
         var y = e.clientY;
