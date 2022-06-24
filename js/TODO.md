@@ -13,3 +13,4 @@
 ✔️ 13. Divi 404 page
 14. Divi search results page
 15. Testimonial slider (https://archipro.com.au/)
+16. Open external links in new tab (work without calling function)
