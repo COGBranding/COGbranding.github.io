@@ -7,3 +7,6 @@
 7. Arrows following mouse
 8. Fullscreen hamburger menu design + animation
 9. Page load animations
+10. Dot following cursor (https://dgrees.studio/)
+11. Animated grain background (https://dgrees.studio/works/autonomy-real-estate/)
+12. Divi project category showing total number of posts in it
