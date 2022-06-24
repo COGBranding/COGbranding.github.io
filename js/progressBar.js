@@ -1,5 +1,5 @@
 function progressBar(selector_id){
-    const post = document.getElementById(selector_name);
+    const post = document.getElementById(selector_id);
     const progress = document.getElementById("reading-progress");
     let inViewport = false;
 
