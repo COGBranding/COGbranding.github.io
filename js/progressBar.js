@@ -1,4 +1,4 @@
-function(selector_id){
+function progressBar(selector_id){
     const post = document.getElementById(selector_name);
     const progress = document.getElementById("reading-progress");
     let inViewport = false;
