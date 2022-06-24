@@ -1,40 +1,17 @@
+//create a element with any id that you want to add tyhe progress bar to.
+//pass the element id to this function and it will handle the rest
+
 function progressBar(selector_id){
-    const post = document.getElementById(selector_id);
-    const progress = document.getElementById("reading-progress");
-    let inViewport = false;
+	const scrollline = document.querySelector('#'+ selector_id);
 
-    let observer = new IntersectionObserver(handler);
+      function fillscrollline(){
+        const windowHeight = window.innerHeight;
+        const fullHeight = document.body.clientHeight;
+        const scrolled = window.scrollY;
+        const percentScrolled = (scrolled / (fullHeight - windowHeight)) * 100;
 
-    observer.observe(post);
+        scrollline.style.width = percentScrolled + '%';
+      };
 
-    //Whenever the post comes in or out of view, this handler is invoked.
-    function handler(entries, observer) {
-    for (entry of entries) {
-        if (entry.isIntersecting) {
-        inViewport = true;
-        } else {
-        inViewport = false;
-        }
-    }
-    }
-
-    // Get the percentage scrolled of an element. It returns zero if its not in view.
-    function getScrollProgress(el) {
-    let coords = el.getBoundingClientRect();
-    let height = coords.height;
-    let progressPercentage = 0;
-
-    if (inViewport && coords.top < 0) {
-        progressPercentage = (Math.abs(coords.top) / height) * 100;
-    }
-
-    return progressPercentage;
-    }
-
-    function showReadingProgress() {
-    progress.setAttribute("value", getScrollProgress(post));
-    }
-
-    //scroll event listener
-    window.onscroll = showReadingProgress;
+      window.addEventListener('scroll', fillscrollline);
 }
