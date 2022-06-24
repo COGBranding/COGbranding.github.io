@@ -8,7 +8,7 @@
 
 
 
-.circle{
+.mouse-follow-circle{
     background:#000; /* var(--follow-mouse-color) */
     width:10px; /* var(--follow-mouse-width) */
     height:10px;  /* var(--follow-mouse-height) */
