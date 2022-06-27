@@ -5,6 +5,19 @@ function currentYear() {
     document.getElementById("year").innerHTML = new Date().getFullYear();
 }
 
+// open all external links on new tabs
+
+$('a').each(function() {
+    var a = new RegExp('/' + window.location.host + '/');
+    if(!a.test(this.href)) {
+        $(this).click(function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            window.open(this.href, '_blank');
+        });
+    }
+ });
+
 // Phone Icon in Menu
 function menuPhone(phone_num) {
     let div = document.createElement("div");
