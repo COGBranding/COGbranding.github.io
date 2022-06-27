@@ -18,6 +18,7 @@ $('a').each(function() {
     }
  });
 
+
 // Phone Icon in Menu
 function menuPhone(phone_num) {
     let div = document.createElement("div");
@@ -64,3 +65,46 @@ function mainHeaderStyle() {
 //     div.innerHTML = htmlText;
 //     return div;
 // }
+
+
+
+//function for arrow follow mouse
+function mouseFollowArrow(){
+    var body =document.getElementsByTagName("body")[0];
+
+    body.onmousemove = function(event) {cursorFinder(event)};
+
+    function cursorFinder(e) {
+        var x = e.clientX;
+        var y = e.clientY;
+        var coor = "Coordinates: (" + x + "," + y + ")";
+    
+    
+    
+        var theArrows = document.getElementsByClassName("arrow_icon");
+    for(var i = 0; i < theArrows.length; i++){
+        var xShapeCenter = getPos(theArrows[i],'x');
+        var yShapeCenter = getPos(theArrows[i],'y');
+        theArrows[i].style.transform = 'rotate('+ twisterMath(x, y, xShapeCenter, yShapeCenter)+'deg)';
+    }
+    }
+
+
+    //from https://stackoverflow.com/questions/288699/get-the-position-of-a-div-span-tag
+    function getPos(el, pos) {
+        // yay readability
+        for (var lx=0, ly=0;
+            el != null;
+            lx += el.offsetLeft, ly += el.offsetTop, el = el.offsetParent);
+        if (pos === 'x'){
+        return lx
+        } else {
+        return ly
+        }
+    }
+
+    //from this crazy smart person https://codepen.io/pudinski/pen/xYoVaa/
+    function twisterMath(x,y, xShapeCenter, yShapeCenter){
+    return  Math.atan2(x - xShapeCenter,-(y - yShapeCenter)) *(180 / Math.PI)
+    }
+}
