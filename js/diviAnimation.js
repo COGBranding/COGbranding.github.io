@@ -19,7 +19,7 @@ function sectionReveal() {
     io.observe(appear);
 }
 
-function animate(animation, speed) {
+function animate(animation, speed, justOnce = '') {
     // Detect request animation frame
     var scroll = window.requestAnimationFrame ||
         // IE Fallback
@@ -36,7 +36,9 @@ function animate(animation, speed) {
                 element.classList.add(speed);
                 element.classList.add(animation);
             } else {
-                element.classList.remove(animation);
+                if(!justOnce){
+                    element.classList.remove(animation);
+                }
             }
         });
 
