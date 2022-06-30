@@ -123,7 +123,7 @@ function footerCollapse() {
         acc[i].addEventListener("click", function() {
             this.classList.toggle("footer-active");
 
-            var content = this.nextElementSibling;
+            var content = document.getElementsByClassName("footer__content");
             if (window.innerWidth <= 980) {
                 if (content.maxHeight) {
                     content.maxHeight = null;
