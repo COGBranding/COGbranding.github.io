@@ -114,3 +114,24 @@ function mouseFollowArrow(){
     return  Math.atan2(x - xShapeCenter,-(y - yShapeCenter)) *(180 / Math.PI)
     }
 }
+
+function footerCollapse() {
+    var acc = document.getElementsByClassName("footer__accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("footer-active");
+
+            var content = this.nextElementSibling;
+            if (window.innerWidth <= 980) {
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            }
+        });
+    }
+}
+footerCollapse();
