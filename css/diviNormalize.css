@@ -626,10 +626,7 @@ ul.et_mobile_menu li.menu-item-has-children.dt-open>.mobile-toggle::after,
     text-align: left;
 }
 
-.footer__content {
-    overflow: hidden;
-    transition: all 0.4s;
-}
+.footer__content {}
 
 @media (max-width: 980px) {
     .footer__accordion {
@@ -638,10 +635,13 @@ ul.et_mobile_menu li.menu-item-has-children.dt-open>.mobile-toggle::after,
 
     .footer__content {
         max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s;
     }
 
     .footer__accordion::after {
         content: "\4c";
         font-family: 'ETmodules';
+        float: right;
     }
 }

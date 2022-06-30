@@ -134,4 +134,3 @@ function footerCollapse() {
         });
     }
 }
-footerCollapse();
