@@ -129,11 +129,11 @@ function footerCollapse() {
             if (window.innerWidth <= 980) {
                 // console.log(content.style.maxHeight);
                 if (content.style.maxHeight != "0px") {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                } else {
                     content.style.maxHeight = '0px';
                     content.style.overflow = 'hidden';
                     content.style.transition = '0.3s';
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
                 }
             }
         });
