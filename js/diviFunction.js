@@ -125,10 +125,10 @@ function footerCollapse() {
 
             var content = this.nextElementSibling;
             if (window.innerWidth <= 980) {
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
+                if (content.maxHeight) {
+                    content.maxHeight = null;
                 } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
+                    content.maxHeight = content.scrollHeight + "px";
                 }
             }
         });
