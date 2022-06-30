@@ -127,7 +127,6 @@ function footerCollapse() {
             console.log(content);
 
             if (window.innerWidth <= 980) {
-                content.style.maxHeight = '0px';
                 // console.log(content.style.maxHeight);
                 if (content.style.maxHeight != "0px") {
                     content.style.maxHeight = '0px';
