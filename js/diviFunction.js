@@ -116,6 +116,13 @@ function mouseFollowArrow(){
 }
 
 function footerCollapse() {
+    if (window.innerWidth <= 980) {
+        // console.log(content.style.maxHeight);
+        content.style.maxHeight = '0px';
+        content.style.overflow = 'hidden';
+        content.style.transition = '0.3s';
+    }
+
     var acc = document.getElementsByClassName("footer__accordion");
     var i;
 
