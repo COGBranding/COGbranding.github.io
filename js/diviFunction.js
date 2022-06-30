@@ -128,7 +128,7 @@ function footerCollapse() {
 
             if (window.innerWidth <= 980) {
                 // console.log(content.style.maxHeight);
-                if (content.style.maxHeight != "0px") {
+                if (!this.classList.contains('footer-active')) {
                     content.style.maxHeight = '0px';
                     content.style.overflow = 'hidden';
                     content.style.transition = '0.3s';

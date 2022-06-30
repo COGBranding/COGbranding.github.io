@@ -3,7 +3,7 @@
 3. Text track matte animations (https://thinkingbox.com/)  
 ✔️ 4. Add class to main and mobile header with styling from CSS CDN  
 5. Add an animation to when the hamburger menu opens  
-6. Accordion footer items  
+✔️ 6. Accordion footer items  
 ✔️ 7. Arrows following mouse  
 8. Fullscreen hamburger menu design + animation  
 9. Page load animations  
