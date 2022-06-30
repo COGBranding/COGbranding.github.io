@@ -123,12 +123,17 @@ function footerCollapse() {
         acc[i].addEventListener("click", function() {
             this.classList.toggle("footer-active");
 
-            var content = document.getElementsByClassName("footer__content");
+            var content = document.getElementById("footer__content");
+            console.log(content);
+
             if (window.innerWidth <= 980) {
-                if (content.maxHeight) {
-                    content.maxHeight = null;
+                // console.log(content.style.maxHeight);
+                if (content.style.maxHeight != "0px") {
+                    content.style.maxHeight = '0px';
+                    content.style.overflow = 'hidden';
+                    content.style.transition = '0.3s';
                 } else {
-                    content.maxHeight = content.scrollHeight + "px";
+                    content.style.maxHeight = content.scrollHeight + "px";
                 }
             }
         });
