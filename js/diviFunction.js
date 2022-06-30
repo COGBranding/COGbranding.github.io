@@ -124,6 +124,7 @@ function footerCollapse() {
             this.classList.toggle("footer-active");
 
             var content = document.getElementById("footer__content");
+            // console.log(content);
 
             if (window.innerWidth <= 980) {
                 // console.log(content.style.maxHeight);
