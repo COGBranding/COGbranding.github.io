@@ -59,6 +59,12 @@ function mainHeaderStyle() {
   mobileHeaderStyle.classList.add('header__mobile');
 }
 
+// Fullscreen Header Styling
+function fullscreenHeaderStyle() {
+    const fullHeaderStyle = document.getElementById('et-top-navigation');
+    fullHeaderStyle.classList.add('header__fullscreen');
+}
+
 // function divFunction(htmlText, classArray) {
 //     let div = document.createElement("div");
 //     div.classList.add(classArray.split(' '));
