@@ -1,6 +1,6 @@
 ✔️ 1. On scroll section animation - fade in + move up  
 ✔️ 2. Progress bar on blog posts  
-3. Text track matte animations (https://thinkingbox.com/, https://ettingshausens.com.au/)  
+3. Text track matte animations (https://www.youtube.com/watch?v=FWQSYONeIqk, https://thisisadvantage.com/) (https://thinkingbox.com/, https://ettingshausens.com.au/)  
 ✔️ 4. Add class to main and mobile header with styling from CSS CDN
 5. Add an animation to when the hamburger menu opens
 ✔️ 6. Accordion footer items  
