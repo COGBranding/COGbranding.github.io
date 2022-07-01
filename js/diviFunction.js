@@ -120,7 +120,6 @@ function footerCollapse() {
     var i;
 
     if (window.innerWidth <= 980) {
-                // console.log(content.style.maxHeight);
             content.style.visibility = 'hidden';
             content.style.maxHeight = '0px';
             content.style.overflow = 'hidden';
