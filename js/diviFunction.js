@@ -121,6 +121,7 @@ function footerCollapse() {
 
     if (window.innerWidth <= 980) {
                 // console.log(content.style.maxHeight);
+            content.style.visibility = 'hidden';
             content.style.maxHeight = '0px';
             content.style.overflow = 'hidden';
             content.style.transition = '0.3s';
@@ -136,10 +137,12 @@ function footerCollapse() {
             if (window.innerWidth <= 980) {
                 // console.log(content.style.maxHeight);
                 if (!this.classList.contains('footer-active')) {
+                    content.style.visibility = 'hidden';
                     content.style.maxHeight = '0px';
                     content.style.overflow = 'hidden';
                     content.style.transition = '0.3s';
                 } else {
+                    content.style.visibility = 'visible';
                     content.style.maxHeight = content.scrollHeight + "px";
                 }
             }
