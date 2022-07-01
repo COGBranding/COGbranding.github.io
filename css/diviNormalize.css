@@ -631,6 +631,12 @@ ul.et_mobile_menu li.menu-item-has-children.dt-open>.mobile-toggle::after,
         cursor: pointer;
     }
 
+    .footer__panel {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-in-out;
+    }
+
     .footer__accordion::after {
         content: "\4c";
         font-family: 'ETmodules';

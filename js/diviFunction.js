@@ -119,11 +119,11 @@ function footerCollapse() {
     var acc = document.getElementsByClassName("footer__accordion");
     var i;
 
-    if (window.innerWidth <= 980) {
-            content.style.maxHeight = '0px';
-            content.style.overflow = 'hidden';
-            content.style.transition = '0.3s';
-        }
+    // if (window.innerWidth <= 980) {
+    //         content.style.maxHeight = '0px';
+    //         content.style.overflow = 'hidden';
+    //         content.style.transition = '0.3s';
+    //     }
 
     for (i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function() {
@@ -134,13 +134,18 @@ function footerCollapse() {
 
             if (window.innerWidth <= 980) {
                 // console.log(content.style.maxHeight);
-                if (!this.classList.contains('footer-active')) {
-                    content.style.maxHeight = '0px';
-                    content.style.overflow = 'hidden';
-                    content.style.transition = '0.3s';
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
                 } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
+                    content.style.maxHeight = panel.scrollHeight + "px";
                 }
+                // if (!this.classList.contains('footer-active')) {
+                //     content.style.maxHeight = '0px';
+                //     content.style.overflow = 'hidden';
+                //     content.style.transition = '0.3s';
+                // } else {
+                //     content.style.maxHeight = content.scrollHeight + "px";
+                // }
             }
         });
     }
