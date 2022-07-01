@@ -631,7 +631,7 @@ ul.et_mobile_menu li.menu-item-has-children.dt-open>.mobile-toggle::after,
         cursor: pointer;
     }
 
-    .footer__panel {
+    .footer__content {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.2s ease-in-out;

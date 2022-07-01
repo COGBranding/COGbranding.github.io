@@ -137,7 +137,7 @@ function footerCollapse() {
                 if (content.style.maxHeight) {
                     content.style.maxHeight = null;
                 } else {
-                    content.style.maxHeight = panel.scrollHeight + "px";
+                    content.style.maxHeight = content.scrollHeight + "px";
                 }
                 // if (!this.classList.contains('footer-active')) {
                 //     content.style.maxHeight = '0px';
