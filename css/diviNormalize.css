@@ -644,8 +644,8 @@ ul.et_mobile_menu li.menu-item-has-children.dt-open>.mobile-toggle::after,
     }
 }
 
-/*divi faq close accordian button */
+/* Divi FAQ close accordion button */
 .et_pb_accordion .et_pb_toggle_open .et_pb_toggle_title:before {
-    display: block!important;
-    content: "\e04f" !important;
+    display: block !important;
+    content: "\4b" !important;
 }
