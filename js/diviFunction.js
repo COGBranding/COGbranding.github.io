@@ -5,18 +5,20 @@ function currentYear() {
     document.getElementById("year").innerHTML = new Date().getFullYear();
 }
 
-// open all external links on new tabs
-
-$('a').each(function() {
-    var a = new RegExp('/' + window.location.host + '/');
-    if(!a.test(this.href)) {
-        $(this).click(function(event) {
-            event.preventDefault();
-            event.stopPropagation();
-            window.open(this.href, '_blank');
-        });
-    }
- });
+// open all external links and pdfs on new tabs
+$(document).ready(function (e) {
+    $('a').each(function() {
+        var a = new RegExp('/' + window.location.host + '/');
+        if(!a.test(this.href)) {
+            $(this).click(function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                window.open(this.href, '_blank');
+            });
+        }
+        $('a[href$=".pdf"]').attr("target", "_blank");
+    });
+});
 
 
 // Phone Icon in Menu
