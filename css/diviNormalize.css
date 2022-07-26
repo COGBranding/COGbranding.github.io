@@ -345,6 +345,9 @@
     .fd-cr-m {
         flex-direction: column-reverse;
     }
+    .fd-c-m {
+        flex-direction: column;
+    }
 }
 
 /* Helper Classes - max-width & margin */
