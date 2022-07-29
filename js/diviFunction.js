@@ -7,19 +7,18 @@ function currentYear() {
 
 // open all external links and pdfs on new tabs
 $(document).ready(function (e) {
-    $('a').each(function() {
-        var a = new RegExp('/' + window.location.host + '/');
-        if(!a.test(this.href)) {
-            $(this).click(function(event) {
+    $("a").each(function () {
+        var a = new RegExp("/" + window.location.host + "/");
+        if (!a.test(this.href)) {
+            $(this).click(function (event) {
                 event.preventDefault();
                 event.stopPropagation();
-                window.open(this.href, '_blank');
+                window.open(this.href, "_blank");
             });
         }
         $('a[href$=".pdf"]').attr("target", "_blank");
     });
 });
-
 
 // Phone Icon in Menu
 function menuPhone(phone_num) {
@@ -33,38 +32,62 @@ function menuPhone(phone_num) {
     // document.getElementById("et_mobile_nav_menu").prepend(div);
 }
 
+// Sticky mobile header
+function stickyMobileHeader(mobile_breakpoint) {
+    let mobileHeader = document.getElementById("#main-header");
+    if (window.innerWidth <= mobile_breakpoint) {
+        mobileHeader.classList.add("et-fixed-header");
+    }
+}
+
 // Add dropdowns to mobile menu
 function mobileMenuDropdown() {
-    $(document).ready(function() {
-            $("body ul.et_mobile_menu li.menu-item-has-children, body ul.et_mobile_menu  li.page_item_has_children").append('<a href="#" class="mobile-toggle"></a>');
-            $('ul.et_mobile_menu li.menu-item-has-children .mobile-toggle, ul.et_mobile_menu li.page_item_has_children .mobile-toggle').click(function(event) {
-                event.preventDefault();
-                $(this).parent('li').toggleClass('dt-open');
-                $(this).parent('li').find('ul.children').first().toggleClass('visible');
-                $(this).parent('li').find('ul.sub-menu').first().toggleClass('visible');
-            });
-            iconFINAL = 'P';
-            $('body ul.et_mobile_menu li.menu-item-has-children, body ul.et_mobile_menu li.page_item_has_children').attr('data-icon', iconFINAL);
-            $('.mobile-toggle').on('mouseover', function() {
-                $(this).parent().addClass('is-hover');
-            }).on('mouseout', function() {
-                $(this).parent().removeClass('is-hover');
-            })
+    $(document).ready(function () {
+        $(
+            "body ul.et_mobile_menu li.menu-item-has-children, body ul.et_mobile_menu  li.page_item_has_children"
+        ).append('<a href="#" class="mobile-toggle"></a>');
+        $(
+            "ul.et_mobile_menu li.menu-item-has-children .mobile-toggle, ul.et_mobile_menu li.page_item_has_children .mobile-toggle"
+        ).click(function (event) {
+            event.preventDefault();
+            $(this).parent("li").toggleClass("dt-open");
+            $(this)
+                .parent("li")
+                .find("ul.children")
+                .first()
+                .toggleClass("visible");
+            $(this)
+                .parent("li")
+                .find("ul.sub-menu")
+                .first()
+                .toggleClass("visible");
         });
+        iconFINAL = "P";
+        $(
+            "body ul.et_mobile_menu li.menu-item-has-children, body ul.et_mobile_menu li.page_item_has_children"
+        ).attr("data-icon", iconFINAL);
+        $(".mobile-toggle")
+            .on("mouseover", function () {
+                $(this).parent().addClass("is-hover");
+            })
+            .on("mouseout", function () {
+                $(this).parent().removeClass("is-hover");
+            });
+    });
 }
 
 // Main Header Styling
 function mainHeaderStyle() {
-  const headerStyle = document.getElementById('et-top-navigation');
-  const mobileHeaderStyle = document.getElementById('et_mobile_nav_menu');
-  headerStyle.classList.add('header__desktop');
-  mobileHeaderStyle.classList.add('header__mobile');
+    const headerStyle = document.getElementById("et-top-navigation");
+    const mobileHeaderStyle = document.getElementById("et_mobile_nav_menu");
+    headerStyle.classList.add("header__desktop");
+    mobileHeaderStyle.classList.add("header__mobile");
 }
 
 // Fullscreen Header Styling
 function fullscreenHeaderStyle() {
-    const fullHeaderStyle = document.getElementById('et-top-navigation');
-    fullHeaderStyle.classList.add('header__fullscreen');
+    const fullHeaderStyle = document.getElementById("et-top-navigation");
+    fullHeaderStyle.classList.add("header__fullscreen");
 }
 
 // function divFunction(htmlText, classArray) {
@@ -74,46 +97,50 @@ function fullscreenHeaderStyle() {
 //     return div;
 // }
 
-
-
 //function for arrow follow mouse
-function mouseFollowArrow(){
-    var body =document.getElementsByTagName("body")[0];
+function mouseFollowArrow() {
+    var body = document.getElementsByTagName("body")[0];
 
-    body.onmousemove = function(event) {cursorFinder(event)};
+    body.onmousemove = function (event) {
+        cursorFinder(event);
+    };
 
     function cursorFinder(e) {
         var x = e.clientX;
         var y = e.clientY;
         var coor = "Coordinates: (" + x + "," + y + ")";
-    
-    
-    
-        var theArrows = document.getElementsByClassName("arrow_icon");
-    for(var i = 0; i < theArrows.length; i++){
-        var xShapeCenter = getPos(theArrows[i],'x');
-        var yShapeCenter = getPos(theArrows[i],'y');
-        theArrows[i].style.transform = 'rotate('+ twisterMath(x, y, xShapeCenter, yShapeCenter)+'deg)';
-    }
-    }
 
+        var theArrows = document.getElementsByClassName("arrow_icon");
+        for (var i = 0; i < theArrows.length; i++) {
+            var xShapeCenter = getPos(theArrows[i], "x");
+            var yShapeCenter = getPos(theArrows[i], "y");
+            theArrows[i].style.transform =
+                "rotate(" +
+                twisterMath(x, y, xShapeCenter, yShapeCenter) +
+                "deg)";
+        }
+    }
 
     //from https://stackoverflow.com/questions/288699/get-the-position-of-a-div-span-tag
     function getPos(el, pos) {
         // yay readability
-        for (var lx=0, ly=0;
+        for (
+            var lx = 0, ly = 0;
             el != null;
-            lx += el.offsetLeft, ly += el.offsetTop, el = el.offsetParent);
-        if (pos === 'x'){
-            return lx
+            lx += el.offsetLeft, ly += el.offsetTop, el = el.offsetParent
+        );
+        if (pos === "x") {
+            return lx;
         } else {
-            return ly
+            return ly;
         }
     }
 
     //from this crazy smart person https://codepen.io/pudinski/pen/xYoVaa/
-    function twisterMath(x,y, xShapeCenter, yShapeCenter){
-    return  Math.atan2(x - xShapeCenter,-(y - yShapeCenter)) *(180 / Math.PI)
+    function twisterMath(x, y, xShapeCenter, yShapeCenter) {
+        return (
+            Math.atan2(x - xShapeCenter, -(y - yShapeCenter)) * (180 / Math.PI)
+        );
     }
 }
 
@@ -122,7 +149,7 @@ function footerCollapse() {
     var i;
 
     for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
+        acc[i].addEventListener("click", function () {
             this.classList.toggle("footer-active");
 
             var content = document.getElementById("footer__content");
@@ -139,21 +166,24 @@ function footerCollapse() {
 }
 
 /* Divi FAQ Accordian close option */
-function accordionClose(){
-    jQuery(function($){
-        $('.et_pb_toggle_title').click(function(){
-            var $toggle = $(this).closest('.et_pb_toggle');
-            if (!$toggle.hasClass('et_pb_accordion_toggling')) {
-                var $accordion = $toggle.closest('.et_pb_accordion');
-                if ($toggle.hasClass('et_pb_toggle_open')) {
-                $accordion.addClass('et_pb_accordion_toggling');
-                $toggle.find('.et_pb_toggle_content').slideToggle(700, function() { 
-                    $toggle.removeClass('et_pb_toggle_open').addClass('et_pb_toggle_close'); 
-                            
-                });
+function accordionClose() {
+    jQuery(function ($) {
+        $(".et_pb_toggle_title").click(function () {
+            var $toggle = $(this).closest(".et_pb_toggle");
+            if (!$toggle.hasClass("et_pb_accordion_toggling")) {
+                var $accordion = $toggle.closest(".et_pb_accordion");
+                if ($toggle.hasClass("et_pb_toggle_open")) {
+                    $accordion.addClass("et_pb_accordion_toggling");
+                    $toggle
+                        .find(".et_pb_toggle_content")
+                        .slideToggle(700, function () {
+                            $toggle
+                                .removeClass("et_pb_toggle_open")
+                                .addClass("et_pb_toggle_close");
+                        });
                 }
-                setTimeout(function(){ 
-                $accordion.removeClass('et_pb_accordion_toggling'); 
+                setTimeout(function () {
+                    $accordion.removeClass("et_pb_accordion_toggling");
                 }, 750);
             }
         });
