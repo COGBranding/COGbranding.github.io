@@ -35,10 +35,8 @@ function menuPhone(phone_num) {
 // Sticky mobile header
 function stickyMobileHeader(mobile_breakpoint) {
     let mobileHeader = document.getElementById("#main-header");
-    for (i = 0; i < mobileHeader.length; i++) {
-        if (window.innerWidth <= mobile_breakpoint) {
-            mobileHeader[i].classList.add("p-fixed");
-        }
+    if (window.innerWidth <= mobile_breakpoint) {
+        mobileHeader.classList.add("p-fixed");
     }
 }
 
@@ -167,7 +165,7 @@ function footerCollapse() {
     }
 }
 
-/* Divi FAQ Accordion close option */
+/* Divi FAQ Accordian close option */
 function accordionClose() {
     jQuery(function ($) {
         $(".et_pb_toggle_title").click(function () {
