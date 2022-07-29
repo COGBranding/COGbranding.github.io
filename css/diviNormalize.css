@@ -421,6 +421,11 @@
     }
 }
 
+/* Helper classes - position */
+.p-fixed{
+    position: fixed;
+}
+
 /* Inline Buttons - place buttons next to each other */
 .btn-inline .et_pb_button_module_wrapper {
     display: inline-block;
