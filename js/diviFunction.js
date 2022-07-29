@@ -34,7 +34,7 @@ function menuPhone(phone_num) {
 
 // Sticky mobile header
 function stickyMobileHeader(mobile_breakpoint) {
-    let mobileHeader = document.getElementById("#main-header");
+    let mobileHeader = document.getElementById("main-header");
     if (window.innerWidth <= mobile_breakpoint) {
         mobileHeader.classList.add("p-fixed");
     }
