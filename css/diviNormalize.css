@@ -423,7 +423,7 @@
 
 /* Helper classes - position */
 .p-fixed{
-    position: fixed;
+    position: fixed !important;
 }
 
 /* Inline Buttons - place buttons next to each other */
