@@ -675,21 +675,37 @@ class custom_ET_Builder_Module_Filterable_Portfolio extends ET_Builder_Module_Ty
 			);
 			$terms               = get_terms( 'project_category', $terms_args );
 
-			$category_filters  = '<ul class="clearfix">';
+			$category_filters  = '<ul class="clearfix project_list">';
 			$category_filters .= sprintf(
-				'<li class="et_pb_portfolio_filter et_pb_portfolio_filter_all"><a href="#" class="active" data-category-slug="all">%1$s %2$s</a></li>',
+				'<li class="et_pb_portfolio_filter et_pb_portfolio_filter_all"><a href="#" class="active" data-category-slug="all">%1$s <sup class="floating_number">(%2$s)</sup></a></li>',
 				esc_html__( 'All', 'et_builder' ),
 				esc_html( count($terms)) 
 			);
 			foreach ( $terms as $term ) {
 				$category_filters .= sprintf(
-					'<li class="et_pb_portfolio_filter"><a href="#" data-category-slug="%1$s">%2$s %3$s</a></li>',
+					'<li class="et_pb_portfolio_filter"><a href="#" data-category-slug="%1$s">%2$s <sup class="floating_number">(%3$s)</sup></a></li>',
 					esc_attr( urldecode( $term->slug ) ),
 					esc_html( $term->name ),
 					esc_html( $term->count )
 				);
 			}
 			$category_filters .= '</ul>';
+
+			$category_filters .= '<select class="clearfix project_dropdown">';
+			$category_filters .= sprintf(
+				'<option class="et_pb_portfolio_filter et_pb_portfolio_filter_all" data-category-slug="all">%1$s <sup class="floating_number">(%2$s)</sup></option>',
+				esc_html__( 'All', 'et_builder' ),
+				esc_html( count($terms)) 
+			);
+			foreach ( $terms as $term ) {
+				$category_filters .= sprintf(
+					'<option class="et_pb_portfolio_filter" data-category-slug="%1$s">%2$s <sup class="floating_number">(%3$s)</sup></option>',
+					esc_attr( urldecode( $term->slug ) ),
+					esc_html( $term->name ),
+					esc_html( $term->count )
+				);
+			}
+			$category_filters .= '</select>';
 		}
 
 		$video_background          = $this->video_background();
