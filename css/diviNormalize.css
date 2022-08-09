@@ -562,11 +562,11 @@
     padding-bottom: 1.25em;
 }
 
-.menu-item.myAccount a {
+.menu-item.account-icon a {
     color: var(--account-icon) !important;
 }
 
-.menu-item.myAccount a::after {
+.menu-item.account-icon a::after {
     content: "\e08a";
     font-family: 'ETmodules';
     font-size: 24px;
