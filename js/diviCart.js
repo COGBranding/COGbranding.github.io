@@ -16,7 +16,7 @@ function menuCart(site_width=980, loadPhone = "", phone_num = "") {
     } else {
         // Add the account icon to the end of the desktop menu
         let lastMenuItem = document.getElementById("top-menu").lastChild;
-        // lastMenuItem.classList.add("myAccount");
+        lastMenuItem.classList.add("myAccount");
         lastMenuItem.before(div);
     }
     if (loadPhone) {
