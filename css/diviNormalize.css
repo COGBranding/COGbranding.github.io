@@ -735,6 +735,9 @@ ul.et_mobile_menu li.menu-item-has-children.dt-open>.mobile-toggle::after,
         font-family: 'ETmodules';
         float: right;
     }
+    .footer__accordion.footer-active::after {
+        transform: rotate(45deg);
+    }
 }
 
 /* Divi FAQ close accordion button */
