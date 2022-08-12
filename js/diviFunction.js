@@ -155,7 +155,7 @@ function footerCollapse(site_width) {
             content = parent_div
                 .querySelector("div")
                 .closest("#footer__content");
-            console.log(content);
+            // console.log(content);
             if (window.innerWidth <= site_width) {
                 if (content.style.maxHeight) {
                     content.style.maxHeight = null;
