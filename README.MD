@@ -3,7 +3,7 @@
 ## 1. To remove Divi class from the tags, call the following function on jquery
 "selector" can be just the tag, class or id name
 
-All divi class starts with either 'et_'  or 'et-', the only one making real differences is 'et_' which is under the code below. place the code in custom.js file and make sure jquery and the [/js/difiFunction.js](/js/difiFunction.js) file is loaded before the custom.js file.
+All divi class starts with either 'et_'  or 'et-', the only one making real differences is 'et_' which is under the code below. place the code in custom.js file and make sure jquery and the [/js/diviFunction.js](/js/diviFunction.js) file is loaded before the custom.js file.
 
 The function can be used to remove any classes (runs wildcard checking for classes starting with) on any criteria, 
 
