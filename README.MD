@@ -1,13 +1,17 @@
-1. To remove Divi class from the tags, call the following function on jquery
-<selector> can be just the tag, class or id name
+# Code Guide to some functions built with the CDN files
+
+## 1. To remove Divi class from the tags, call the following function on jquery
+"selector" can be just the tag, class or id name
 
 All divi class starts with either 'et_'  or 'et-', the only one making real differences is 'et_' which is under the code below. place the code in custom.js file and make sure jquery and the [/js/difiFunction.js](/js/difiFunction.js) file is loaded before the custom.js file.
 
 The function can be used to remove any classes (runs wildcard checking for classes starting with) on any criteria, 
 
-$("<selector>").removeClassStartingWith('et_'); 
+```
+$("selector").removeClassStartingWith('et_'); 
+```
 
-2. CDN For COGBranding Sites.
+## 2. CDN For COGBranding Sites.
 
 For filterable portfolio, making changes to the appearance like adding html tags and stuffs plz go do [/divi-child/includes/custom-FilterablePortfolio.php](/divi-child/includes/custom-FilterablePortfolio.php)
 line 679 wrap %2$s with the tag and line 686 wrap %3$s with the tag.
