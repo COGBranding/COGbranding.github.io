@@ -144,18 +144,19 @@ function mouseFollowArrow() {
     }
 }
 
-function footerCollapse() {
+function footerCollapse(site_width) {
     var acc = document.getElementsByClassName("footer__accordion");
     var i;
 
-    
     for (i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function () {
             this.classList.toggle("footer-active");
-            var parent_div =  this.closest('div');
-            content = parent_div.querySelector('div').closest('#footer__content');
-            console.log(content);
-            if (window.innerWidth <= 980) {
+            var parent_div = this.closest("div");
+            content = parent_div
+                .querySelector("div")
+                .closest("#footer__content");
+            // console.log(content);
+            if (window.innerWidth <= site_width) {
                 if (content.style.maxHeight) {
                     content.style.maxHeight = null;
                 } else {
