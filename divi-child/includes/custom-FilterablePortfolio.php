@@ -675,11 +675,17 @@ class custom_ET_Builder_Module_Filterable_Portfolio extends ET_Builder_Module_Ty
 			);
 			$terms               = get_terms( 'project_category', $terms_args );
 
+			$args = array(
+				'post_type' => 'project',
+				'post_status' => 'publish',				
+				'numberposts' => -1
+				);
+			$num = count( get_posts( $args ) );
 			$category_filters  = '<ul class="clearfix project_list">';
 			$category_filters .= sprintf(
 				'<li class="et_pb_portfolio_filter et_pb_portfolio_filter_all"><a href="#" class="active" data-category-slug="all">%1$s <sup class="floating_number">(%2$s)</sup></a></li>',
 				esc_html__( 'All', 'et_builder' ),
-				esc_html( count($terms)) 
+				esc_html( $num) 
 			);
 			foreach ( $terms as $term ) {
 				$category_filters .= sprintf(
