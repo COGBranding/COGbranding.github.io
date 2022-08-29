@@ -145,26 +145,27 @@ function mouseFollowArrow() {
 }
 
 function footerCollapse(site_width) {
-    var acc = document.getElementsByClassName("footer__accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-            this.classList.toggle("footer-active");
-            var parent_div = this.closest("div");
-            content = parent_div
-                .querySelector("div")
-                .closest("#footer__content");
-            // console.log(content);
-            if (window.innerWidth <= site_width) {
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
+    if(window.innerWidth <= site_width){
+        var acc = document.getElementsByClassName("footer__accordion");
+        var i;
+    
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                if($('.footer__accordion').hasClass('footer-active')){
+                    $('.footer__accordion').not(this).removeClass('footer-active');
+                    $('.footer__accordion').not(this).parent().find('#footer__content').css('max-height', '0');
                 }
-            }
-        });
-    }
+                this.classList.toggle("footer-active");
+                content = $(this).parent().find('#footer__content');
+                if($(this).parent().find('#footer__content').css('max-height') != '0px'){
+                    $(this).parent().find('#footer__content').css('max-height', '0px');
+                }
+                else {
+                    $(this).parent().find('#footer__content').css('max-height', content.prop("scrollHeight") + "px");
+                }
+            });
+          }
+      }
 }
 
 /* Divi FAQ Accordian close option */
