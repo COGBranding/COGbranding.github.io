@@ -196,7 +196,7 @@ function footerCollapse(site_width) {
     }
 }
 
-/* Divi FAQ Accordian close option */
+/* Divi FAQ Accordion close option */
 function accordionClose() {
     jQuery(function ($) {
         $(".et_pb_toggle_title").click(function () {
