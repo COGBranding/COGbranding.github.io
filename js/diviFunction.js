@@ -236,15 +236,21 @@ $(document).ready(function (e) {
 // Get the max height of an element and apply the height to other elements with the same class
 function getMaxHeight(screen_width, className) {
     var maxHeight = 0;
-    document.getElementsByClassName(className);
-
-    for (let i = 0; i < className.length; i++) {
-        if (
-            className.height() > maxHeight &&
-            window.innerWidth > screen_width
-        ) {
-            maxHeight = className.height();
+    $(className).each(function () {
+        if ($(this).height() > maxHeight && window.innerWidth > screen_width) {
+            maxHeight = $(this).height();
         }
-    }
-    className.height(maxHeight);
+    });
+    $(className).height(maxHeight);
+    // document.getElementsByClassName(className);
+
+    // for (let i = 0; i < className.length; i++) {
+    //     if (
+    //         className.height() > maxHeight &&
+    //         window.innerWidth > screen_width
+    //     ) {
+    //         maxHeight = className.height();
+    //     }
+    // }
+    // className.height(maxHeight);
 }
