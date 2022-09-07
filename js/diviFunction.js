@@ -73,6 +73,24 @@ function mobileMenuDropdown() {
             .on("mouseout", function () {
                 $(this).parent().removeClass("is-hover");
             });
+        
+        $('.menu-item-has-children').on('click', function(e){
+            e.preventDefault();
+            console.log($('.menu-item-has-children').find('ul'))
+            var ooc = ($(this).hasClass('dt-open'));
+            // var ooc = 0;
+            console.log(ooc)
+            $('.menu-item-has-children').removeClass('dt-open');
+            $('.menu-item-has-children').find('ul').removeClass('visible');
+            if(!ooc){
+                $(this).removeClass('dt-open');
+                $(this).find('ul').removeClass('visible')
+            }
+            else{
+                $(this).addClass('dt-open');
+                $(this).find('ul').addClass('visible')
+            }
+        })
     });
 }
 
