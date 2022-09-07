@@ -234,10 +234,10 @@ $(document).ready(function (e) {
 });
 
 // Get the max height of an element and apply the height to other elements with the same class
-function getMaxHeight(screen_width, className) {
+function getMaxHeight(site_width, className) {
     var maxHeight = 0;
     $(className).each(function () {
-        if ($(this).height() > maxHeight && window.innerWidth > screen_width) {
+        if ($(this).height() > maxHeight && window.innerWidth > site_width) {
             maxHeight = $(this).height();
         }
     });
