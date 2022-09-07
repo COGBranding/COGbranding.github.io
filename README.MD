@@ -60,3 +60,10 @@ sup.floating_number{
 
 For reference on overriding templates on divi-child theme follow the following link:
 [https://help.elegantthemes.com/en/articles/3192155-moving-filterable-portfolio-module-to-child-theme](https://help.elegantthemes.com/en/articles/3192155-moving-filterable-portfolio-module-to-child-theme)
+
+## 3. Add three dots to Divi breadcrumbs that are not the home or current page
+
+const childBreadcrumb = document.querySelector(
+        ".lwp-breadcrumbs a:not(.home) span[property='name']"
+    );
+    childBreadcrumb.innerHTML = ". . .";
