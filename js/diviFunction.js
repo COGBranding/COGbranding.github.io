@@ -242,15 +242,4 @@ function getMaxHeight(screen_width, className) {
         }
     });
     $(className).height(maxHeight);
-    // document.getElementsByClassName(className);
-
-    // for (let i = 0; i < className.length; i++) {
-    //     if (
-    //         className.height() > maxHeight &&
-    //         window.innerWidth > screen_width
-    //     ) {
-    //         maxHeight = className.height();
-    //     }
-    // }
-    // className.height(maxHeight);
 }
