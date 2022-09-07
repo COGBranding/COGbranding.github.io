@@ -74,14 +74,16 @@ function mobileMenuDropdown() {
                 $(this).parent().removeClass("is-hover");
             });
         
+        //close the opened dropdown if another is opened
         $('.menu-item-has-children').on('click', function(e){
+            //prevents default action
             e.preventDefault();
-            console.log($('.menu-item-has-children').find('ul'))
+            // checks and stores whether selected element is open or not
             var ooc = ($(this).hasClass('dt-open'));
-            // var ooc = 0;
-            console.log(ooc)
+            //closes all dropdowns
             $('.menu-item-has-children').removeClass('dt-open');
             $('.menu-item-has-children').find('ul').removeClass('visible');
+            //opens the current element if its closed. closes it if its open
             if(!ooc){
                 $(this).removeClass('dt-open');
                 $(this).find('ul').removeClass('visible')
