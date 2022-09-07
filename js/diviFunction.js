@@ -73,26 +73,25 @@ function mobileMenuDropdown() {
             .on("mouseout", function () {
                 $(this).parent().removeClass("is-hover");
             });
-        
+
         //close the opened dropdown if another is opened
-        $('.menu-item-has-children').on('click', function(e){
+        $(".menu-item-has-children").on("click", function (e) {
             //prevents default action
             e.preventDefault();
             // checks and stores whether selected element is open or not
-            var ooc = ($(this).hasClass('dt-open'));
+            var ooc = $(this).hasClass("dt-open");
             //closes all dropdowns
-            $('.menu-item-has-children').removeClass('dt-open');
-            $('.menu-item-has-children').find('ul').removeClass('visible');
+            $(".menu-item-has-children").removeClass("dt-open");
+            $(".menu-item-has-children").find("ul").removeClass("visible");
             //opens the current element if its closed. closes it if its open
-            if(!ooc){
-                $(this).removeClass('dt-open');
-                $(this).find('ul').removeClass('visible')
+            if (!ooc) {
+                $(this).removeClass("dt-open");
+                $(this).find("ul").removeClass("visible");
+            } else {
+                $(this).addClass("dt-open");
+                $(this).find("ul").addClass("visible");
             }
-            else{
-                $(this).addClass('dt-open');
-                $(this).find('ul').addClass('visible')
-            }
-        })
+        });
     });
 }
 
@@ -109,13 +108,6 @@ function fullscreenHeaderStyle() {
     const fullHeaderStyle = document.getElementById("et-top-navigation");
     fullHeaderStyle.classList.add("header__fullscreen");
 }
-
-// function divFunction(htmlText, classArray) {
-//     let div = document.createElement("div");
-//     div.classList.add(classArray.split(' '));
-//     div.innerHTML = htmlText;
-//     return div;
-// }
 
 //function for arrow follow mouse
 function mouseFollowArrow() {
@@ -165,27 +157,43 @@ function mouseFollowArrow() {
 }
 
 function footerCollapse(site_width) {
-    if(window.innerWidth <= site_width){
+    if (window.innerWidth <= site_width) {
         var acc = document.getElementsByClassName("footer__accordion");
         var i;
-    
+
         for (i = 0; i < acc.length; i++) {
             acc[i].addEventListener("click", function () {
-                if($('.footer__accordion').hasClass('footer-active')){
-                    $('.footer__accordion').not(this).removeClass('footer-active');
-                    $('.footer__accordion').not(this).parent().find('#footer__content').css('max-height', '0');
+                if ($(".footer__accordion").hasClass("footer-active")) {
+                    $(".footer__accordion")
+                        .not(this)
+                        .removeClass("footer-active");
+                    $(".footer__accordion")
+                        .not(this)
+                        .parent()
+                        .find("#footer__content")
+                        .css("max-height", "0");
                 }
                 this.classList.toggle("footer-active");
-                content = $(this).parent().find('#footer__content');
-                if($(this).parent().find('#footer__content').css('max-height') != '0px'){
-                    $(this).parent().find('#footer__content').css('max-height', '0px');
-                }
-                else {
-                    $(this).parent().find('#footer__content').css('max-height', content.prop("scrollHeight") + "px");
+                content = $(this).parent().find("#footer__content");
+                if (
+                    $(this)
+                        .parent()
+                        .find("#footer__content")
+                        .css("max-height") != "0px"
+                ) {
+                    $(this)
+                        .parent()
+                        .find("#footer__content")
+                        .css("max-height", "0px");
+                } else {
+                    $(this)
+                        .parent()
+                        .find("#footer__content")
+                        .css("max-height", content.prop("scrollHeight") + "px");
                 }
             });
-          }
-      }
+        }
+    }
 }
 
 /* Divi FAQ Accordian close option */
@@ -213,9 +221,30 @@ function accordionClose() {
     });
 }
 
-
 /* function to remove divi classes from seleted parameters */
-
 $(document).ready(function (e) {
-    $.fn.removeClassStartingWith = function (filter) {     $(this).removeClass(function (index, className) {         return (className.match(new RegExp("\\S*" + filter + "\\S*", 'g')) || []).join(' ')     });     return this; }; 
+    $.fn.removeClassStartingWith = function (filter) {
+        $(this).removeClass(function (index, className) {
+            return (
+                className.match(new RegExp("\\S*" + filter + "\\S*", "g")) || []
+            ).join(" ");
+        });
+        return this;
+    };
 });
+
+// Get the max height of an element and apply the height to other elements with the same class
+function getMaxHeight(screen_width) {
+    var maxHeight = 0;
+    document.getElementsByClassName(className);
+
+    for (let i = 0; i < className.length; i++) {
+        if (
+            className.height() > maxHeight &&
+            window.innerWidth > screen_width
+        ) {
+            maxHeight = className.height();
+        }
+    }
+    className.height(maxHeight);
+}
