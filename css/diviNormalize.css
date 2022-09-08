@@ -745,3 +745,20 @@ ul.et_mobile_menu li.menu-item-has-children.dt-open>.mobile-toggle::after,
     display: block !important;
     content: "\4b" !important;
 }
+
+/*CSS for divi-overlay*/
+#cog-overlay{
+    min-width: 100%;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    pointer-events: auto;
+    display:none;
+    overflow-y:auto;
+    -webkit-overflow-scrolling: touch;
+}
