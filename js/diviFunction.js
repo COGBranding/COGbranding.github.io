@@ -77,7 +77,7 @@ function mobileMenuDropdown() {
         //close the opened dropdown if another is opened
         $(".menu-item-has-children").on("click", function (e) {
             //prevents default action
-            e.preventDefault();
+            // e.preventDefault();
             // checks and stores whether selected element is open or not
             var ooc = $(this).hasClass("dt-open");
             //closes all dropdowns
