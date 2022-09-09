@@ -252,10 +252,10 @@ function getMaxHeight(site_width, className) {
 }
 
 // Close Divi mobile menu when clicked outside menu area
-jQuery(document).ready(function () {
-    jQuery("body").on("click", function () {
-        if (jQuery(".mobile_nav").hasClass("opened")) {
-            jQuery(".mobile_menu_bar").click();
-        }
-    });
-});
+// jQuery(document).ready(function () {
+//     jQuery("body").on("click", function () {
+//         if (jQuery(".mobile_nav").hasClass("opened")) {
+//             jQuery(".mobile_menu_bar").click();
+//         }
+//     });
+// });
