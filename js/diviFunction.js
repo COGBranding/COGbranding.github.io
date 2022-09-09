@@ -59,6 +59,15 @@ function mobileMenuDropdown() {
             "ul.et_mobile_menu li.menu-item-has-children .mobile-toggle, ul.et_mobile_menu li.page_item_has_children .mobile-toggle"
         ).click(function (event) {
             event.preventDefault();
+            var ooc = $(this).hasClass("dt-open");
+            if (!ooc) {
+                $(this).removeClass("dt-open");
+                $(this).find("ul").removeClass("visible");
+            } else {
+                $(this).addClass("dt-open");
+                $(this).find("ul").addClass("visible");
+            }
+            $(".menu-item-has-children").removeClass("dt-open");
             $(this).parent("li").toggleClass("dt-open");
             $(this)
                 .parent("li")
