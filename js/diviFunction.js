@@ -1,7 +1,5 @@
 console.log("diviFunction is working");
 
-
-
 // Current Year HTML
 function currentYear() {
     document.getElementById("year").innerHTML = new Date().getFullYear();
@@ -21,12 +19,12 @@ $(document).ready(function (e) {
         $('a[href$=".pdf"]').attr("target", "_blank");
     });
 
-    //Adds dark background overlay on divi mobile menu open 
+    //Adds dark background overlay on divi mobile menu open
     var html = '<div id="cog-overlay"></div>';
-    $(html).insertBefore('#main-content')
-    $('#et_mobile_nav_menu .mobile_menu_bar_toggle').click(function(){
-        $('#cog-overlay').toggle()
-    })
+    $(html).insertBefore("#main-content");
+    $("#et_mobile_nav_menu .mobile_menu_bar_toggle").click(function () {
+        $("#cog-overlay").toggle();
+    });
 });
 
 // Phone Icon in Menu
@@ -252,3 +250,12 @@ function getMaxHeight(site_width, className) {
     });
     $(className).height(maxHeight);
 }
+
+// Close Divi mobile menu when clicked outside menu area
+jQuery(document).ready(function () {
+    jQuery("body").on("click", function () {
+        if (jQuery(".mobile_nav").hasClass("opened")) {
+            jQuery(".mobile_menu_bar").click();
+        }
+    });
+});
