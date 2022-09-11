@@ -259,3 +259,45 @@ jQuery(document).ready(function () {
         }
     });
 });
+
+// // Function to focus the hovered menu item
+// function focusHoveredItem() {
+//     let headerItem = document.getElementsByClassName("menu-item");
+
+//     for (let i = 0; i < headerItem.length; i++) {
+//         headerItem[i].addEventListener("mouseenter", (event) => {
+//             headerItem[i].classList.add("active");
+//             if (!headerItem[i].classList.contains("active")) {
+//                 headerItem[i].classList.add("inactive");
+//             }
+//             // headerItem[i].style.opacity = "0.25";
+//             // this.style.opacity = "1";
+//         });
+//         headerItem[i].addEventListener("mouseleave", (event) => {
+//             // headerItem[i].style.opacity = "1";
+//             headerItem[i].classList.remove("active");
+//             if (!headerItem[i].classList.contains("active")) {
+//                 headerItem[i].classList.remove("inactive");
+//             }
+//         });
+//     }
+// }
+// focusHoveredItem();
+
+// // Add active class to hovered item setting opacity to 100%
+// // Add new class to all other items but hovered that lower the opacity
+
+// #top-menu > li {
+//             pointer-events: auto;
+//             transition: opacity 200ms ease-in-out;
+//             will-change: opacity;
+
+// }
+// #top-menu:hover > li:not(:hover) {
+//     opacity: .25;
+// }
+// #top-menu a{
+//     &:hover {
+//         opacity: 1 !important;
+//     }
+// }
