@@ -273,6 +273,9 @@ function focusHoverItem(site_width){
                 function(){ $('#top-menu .menu-item').not(this).addClass('inactive') },
                 function(){ $('#top-menu .menu-item').not(this).removeClass('inactive') }   
             )
+            $('.account-icon, .cart-icon, .phone-icon').hover(
+                function(){ $('#top-menu .menu-item').not(this).removeClass('inactive') } 
+            )
             $('.footer__content__item').hover(
                 function(){ $('.footer__content__item').not(this).addClass('inactive') },
                 function(){ $('.footer__content__item').not(this).removeClass('inactive') }   
