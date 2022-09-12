@@ -27,4 +27,5 @@ function menuCart(site_width=980, loadPhone = "", phone_num = "") {
 // // Load Cart Icon Only
 function menuDiviCart() {
     $("#et_mobile_nav_menu").prepend($(".menu-cart-info").parent().html()) + $(".menu-cart-info").before(div);
+    $(".menu-cart-info").parent().addClass('cart-icon');
 }

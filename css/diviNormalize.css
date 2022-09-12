@@ -562,6 +562,9 @@
     padding-bottom: 1.25em;
 }
 
+.menu-item.account-icon.inactive, .menu-item.cart-icon.inactive, .menu-item.phone-icon.inactive {
+    opacity: 1;
+}
 .menu-item.account-icon a {
     color: var(--account-icon) !important;
 }
@@ -762,3 +765,4 @@ ul.et_mobile_menu li.menu-item-has-children.dt-open>.mobile-toggle::after,
     overflow-y:auto;
     -webkit-overflow-scrolling: touch;
 }
+
