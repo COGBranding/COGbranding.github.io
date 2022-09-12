@@ -269,7 +269,7 @@ jQuery(document).ready(function () {
 function focusHoverItem(site_width){
     jQuery(document).ready(function () {
         if (window.innerWidth >= site_width) {        
-            $('.menu-item').hover(
+            $('#top-menu .menu-item').hover(
                 function(){ $('#top-menu .menu-item').not(this).addClass('inactive') },
                 function(){ $('#top-menu .menu-item').not(this).removeClass('inactive') }   
             )
