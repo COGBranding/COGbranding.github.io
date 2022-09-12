@@ -270,7 +270,7 @@ function focusHoverItem(site_width){
     jQuery(document).ready(function () {
         if (window.innerWidth >= site_width) {        
             $('#top-menu .menu-item').hover(
-                function(){ $('#top-menu .menu-item').not(this).addClass('inactive') },
+                function(){ $('#top-menu .menu-item').not(this).addClass('inactive'); $($(this).parent().parent()).removeClass('inactive'); $(this).parent().find('li').removeClass('inactive') },
                 function(){ $('#top-menu .menu-item').not(this).removeClass('inactive') }   
             )
             $('.account-icon, .cart-icon, .phone-icon').hover(
