@@ -243,12 +243,17 @@ $(document).ready(function (e) {
 // Get the max height of an element and apply the height to other elements with the same class
 function getMaxHeight(site_width, className) {
     var maxHeight = 0;
+    maxHeight = new Array();
     $(className).each(function () {
-        if ($(this).height() > maxHeight && window.innerWidth > site_width) {
-            maxHeight = $(this).height();
-        }
-    });
-    $(className).height(maxHeight);
+        $(className[i]).each(function () {
+            if ($(this).height() > maxHeight && window.innerWidth > site_width) {
+                maxHeight = $(this).height();
+            }
+        });
+    })
+    $(className).each(function () {
+        $(className[i]).height(maxHeight[i]);
+    })
 }
 
 // Close Divi mobile menu when clicked outside menu area
@@ -263,7 +268,7 @@ jQuery(document).ready(function () {
 // // Function to focus the hovered menu item
 function focusHoverItem(site_width){
     jQuery(document).ready(function () {
-        if (window.innerWidth <= site_width) {        
+        if (window.innerWidth >= site_width) {        
             $('.menu-item').hover(
                 function(){ $('#top-menu .menu-item').not(this).addClass('inactive') },
                 function(){ $('#top-menu .menu-item').not(this).removeClass('inactive') }   
