@@ -22,6 +22,7 @@ function menuCart(site_width=980, loadPhone = "", phone_num = "") {
     if (loadPhone) {
         menuPhone(phone_num);
     }
+    $(".menu-cart-info").parent().addClass('cart-icon');
 }
 
 // // Load Cart Icon Only

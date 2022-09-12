@@ -766,3 +766,10 @@ ul.et_mobile_menu li.menu-item-has-children.dt-open>.mobile-toggle::after,
     -webkit-overflow-scrolling: touch;
 }
 
+li.menu-item, a.footer__content__item {
+    transition: all 0.2s ease-in-out;
+}
+.inactive {
+    opacity: 0.5;
+    transition: all 0.2s ease-in-out;
+}
