@@ -778,7 +778,15 @@ li.menu-item, a.footer__content__item {
 /* Hide more link unless we need it. */
 #more-menu {
     display: none;
-  }
-  #more-menu.visible {
+}
+#more-menu.visible {
     display: inline-block;
-  }
+}
+
+#more-menu .sub-menu {
+    right: 0;
+}
+
+#more-menu a.header__icons__icon {
+    width: 50% !important;
+}
