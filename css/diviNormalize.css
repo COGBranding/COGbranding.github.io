@@ -777,14 +777,18 @@ li.menu-item, a.footer__content__item {
 /* Priority Menu */
 /* Hide more link unless we need it. */
 #more-menu {
-    display: none;
+    display: none !important;
 }
 #more-menu.visible {
-    display: inline-block;
+    display: inline-block !important;
 }
 
 #more-menu .sub-menu {
     right: 0;
+}
+
+#more-menu .sub-menu .sub-menu {
+	right: calc(var(--submenu-length, 320px) + 10px);
 }
 
 #more-menu a.header__icons__icon {
