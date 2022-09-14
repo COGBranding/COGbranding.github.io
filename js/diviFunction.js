@@ -83,8 +83,6 @@ function mobileMenuDropdown() {
 
         //close the opened dropdown if another is opened
         $(".menu-item-has-children").on("click", function (e) {
-            //prevents default action
-            // e.preventDefault();
             // checks and stores whether selected element is open or not
             var ooc = $(this).hasClass("dt-open");
             //closes all dropdowns
@@ -265,7 +263,7 @@ jQuery(document).ready(function () {
     });
 });
 
-// // Function to focus the hovered menu item
+// Function to focus the hovered menu item
 function focusHoverItem(site_width){
     jQuery(document).ready(function () {
         if (window.innerWidth >= site_width) {        
@@ -286,4 +284,77 @@ function focusHoverItem(site_width){
             )
         }
     })
+}
+
+// priority menu function
+function priority_menu(){
+    ( function( $ ) {
+        $('#top-menu').append('<li id="more-menu" class="menu-item menu-item-has-children"><a href="#"><span class="">More </span></a><ul class="sub-menu"></ul></li>')
+        // Priority+ navigation, whee!
+        function priorityNav() {
+            // Make sure we have a menu and that the more-more item is present
+            if ( 0 < $( '#top-menu' ).length && 0 < $( '#more-menu' ).length ) {
+                var navWidth = 0;
+                var firstMoreElement = $( '#more-menu li' ).first();
+
+                // Calculate the width of our "more" containing element
+                var moreWidth = parseInt($( '#more-menu' ).outerWidth());
+
+                console.log("more1: " + moreWidth)
+                // Calculate the current width of our navigation
+                $( '#top-menu-nav #top-menu > li' ).each( function() {
+                    navWidth += $( this ).outerWidth();
+                });
+
+                if(moreWidth <= 10) {
+                    moreWidth = 80;
+                }
+
+                // Calculate our available space
+                availableSpace =  $('.logo_container').innerWidth() - (moreWidth*2) - $('.logo_container img').outerWidth();
+                
+                // If our nav is wider than our available space, we're going to move items
+                if (navWidth > availableSpace) {
+                    var lastItem = $( '#top-menu-nav #top-menu > li:not(#more-menu)' ).last();
+                    lastItem.attr( 'data-width', lastItem.outerWidth() );
+                    lastItem.prependTo( $( '#more-menu .sub-menu' ).eq( 0 ) );
+                    priorityNav(); // Rerun this function!
+
+                // But if we have the extra space, we should add the items back to our menu
+                } else if (navWidth + firstMoreElement.data( 'width' ) < availableSpace) {
+                    // Check to be sure there's enough space for our extra element
+                    firstMoreElement.insertBefore( $( '#top-menu-nav #top-menu > li' ).last() );
+                    priorityNav();
+                }
+
+                // Hide our more-menu entirely if there's nothing in it
+                if ($( '#more-menu li' ).length > 0) {
+                    $( '#more-menu' ).addClass( 'visible' );
+                } else {
+                    $( '#more-menu' ).removeClass( 'visible' );
+                }
+            } // check for body class
+        }; // function priorityNav
+
+
+        // Run our functions once the window has loaded fully
+        $( window ).on( 'load', function() {
+            priorityNav();
+        });
+
+        // Annnnnd also every time the window resizes
+        var isResizing = false;
+        $( window ).on('resize', function() {
+            if (isResizing) {
+                return;
+            }
+
+            isResizing = true;
+            setTimeout(function() {
+                priorityNav();
+                isResizing = false;
+            }, 150);
+        });
+
+    } )( jQuery );
 }

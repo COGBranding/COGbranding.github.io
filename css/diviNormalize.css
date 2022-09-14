@@ -773,3 +773,12 @@ li.menu-item, a.footer__content__item {
     opacity: 0.5;
     transition: all 0.2s ease-in-out;
 }
+
+/* Priority Menu */
+/* Hide more link unless we need it. */
+#more-menu {
+    display: none;
+  }
+  #more-menu.visible {
+    display: inline-block;
+  }
