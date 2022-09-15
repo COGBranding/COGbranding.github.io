@@ -797,5 +797,6 @@ li.menu-item, a.footer__content__item {
 .more-menu-label::after {
     font-family: 'ETmodules';
     content: "\5e\5e\5e";
-    letter-spacing: -4px;
+    font-size: 0.75rem;
+    letter-spacing: -2px;
 }
