@@ -66,4 +66,6 @@ For reference on overriding templates on divi-child theme follow the following l
 const childBreadcrumb = document.querySelector(
         ".lwp-breadcrumbs a:not(.home) span[property='name']"
     );
-    childBreadcrumb.innerHTML = ". . .";
+    if (childBreadcrumb) {
+        childBreadcrumb.innerHTML = ". . .";
+    }
