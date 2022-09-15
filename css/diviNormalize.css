@@ -788,9 +788,13 @@ li.menu-item, a.footer__content__item {
 }
 
 #more-menu .sub-menu .sub-menu {
-	right: calc(var(--submenu-length, 320px) + 10px);
+	right: calc(var(--submenu-length, 240px) + 10px);
 }
 
 #more-menu a.header__icons__icon {
     width: 50% !important;
+}
+.more-menu-label {
+    font-family: 'ETmodules';
+    content: "\5e \5e \5e";
 }
