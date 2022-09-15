@@ -304,7 +304,7 @@ function focusHoverItem(site_width) {
 function priorityMenu() {
     (function ($) {
         $("#top-menu").append(
-            '<li id="more-menu" class="menu-item menu-item-has-children"><a href="#"><span class="more-menu-label"></span></a><ul class="sub-menu"></ul></li>'
+            '<li id="more-menu" class="menu-item menu-item-has-children"><a href="#"><span class="more-menu-label">More</span></a><ul class="sub-menu"></ul></li>'
         );
         // Priority+ navigation, whee!
         function priorityNav() {
