@@ -253,13 +253,9 @@ function getMaxHeight(site_width, className) {
             ) {
                 maxHeight = $(this).height();
             }
+            $(this).height(maxHeight);
             i++;
         });
-    });
-    $(className).each(function () {
-        $(className[j]).height(maxHeight);
-        j++;
-
     });
 }
 
