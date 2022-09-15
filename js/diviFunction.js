@@ -259,8 +259,12 @@ function getMaxHeight(site_width, className) {
         });
     });
     $(className).each(function () {
+<<<<<<< HEAD
         $(className[j]).height(maxHeight);
         j++;
+=======
+        $(className[i]).height(maxHeight[i]);
+>>>>>>> 226b31b63e2ecdbff49e00f8593126b9b214f726
     });
 }
 
@@ -274,97 +278,118 @@ jQuery(document).ready(function () {
 });
 
 // Function to focus the hovered menu item
-function focusHoverItem(site_width){
+function focusHoverItem(site_width) {
     jQuery(document).ready(function () {
-        if (window.innerWidth >= site_width) {        
-            $('#top-menu .menu-item').hover(
-                function(){ 
-                    $('#top-menu .menu-item').not(this).addClass('inactive'); 
-                    $(this).parent().parent().removeClass('inactive'); 
-                    $(this).parent('.sub-menu').find('li').removeClass('inactive') 
+        if (window.innerWidth >= site_width) {
+            $("#top-menu .menu-item").hover(
+                function () {
+                    $("#top-menu .menu-item").not(this).addClass("inactive");
+                    $(this).parent().parent().removeClass("inactive");
+                    $(this)
+                        .parent(".sub-menu")
+                        .find("li")
+                        .removeClass("inactive");
                 },
-                function(){ $('#top-menu .menu-item').not(this).removeClass('inactive') }   
-            )
-            $('.account-icon, .cart-icon, .phone-icon').hover(
-                function(){ $('#top-menu .menu-item').not(this).removeClass('inactive') } 
-            )
-            $('.footer__content__item').hover(
-                function(){ $('.footer__content__item').not(this).addClass('inactive') },
-                function(){ $('.footer__content__item').not(this).removeClass('inactive') }   
-            )
+                function () {
+                    $("#top-menu .menu-item").not(this).removeClass("inactive");
+                }
+            );
+            $(".account-icon, .cart-icon, .phone-icon").hover(function () {
+                $("#top-menu .menu-item").not(this).removeClass("inactive");
+            });
+            $(".footer__content__item").hover(
+                function () {
+                    $(".footer__content__item").not(this).addClass("inactive");
+                },
+                function () {
+                    $(".footer__content__item")
+                        .not(this)
+                        .removeClass("inactive");
+                }
+            );
         }
-    })
+    });
 }
 
 // priority menu function
-function priority_menu(){
-    ( function( $ ) {
-        $('#top-menu').append('<li id="more-menu" class="menu-item menu-item-has-children"><a href="#"><span class="">More </span></a><ul class="sub-menu"></ul></li>')
+function priorityMenu() {
+    (function ($) {
+        $("#top-menu").append(
+            '<li id="more-menu" class="menu-item menu-item-has-children"><a href="#"><span class="more-menu-label"></span></a><ul class="sub-menu"></ul></li>'
+        );
         // Priority+ navigation, whee!
         function priorityNav() {
             // Make sure we have a menu and that the more-more item is present
-            if ( 0 < $( '#top-menu' ).length && 0 < $( '#more-menu' ).length ) {
+            if (0 < $("#top-menu").length && 0 < $("#more-menu").length) {
                 var navWidth = 0;
-                var firstMoreElement = $( '#more-menu li' ).first();
+                var firstMoreElement = $("#more-menu li").first();
 
                 // Calculate the width of our "more" containing element
-                var moreWidth = parseInt($( '#more-menu' ).outerWidth());
+                var moreWidth = parseInt($("#more-menu").outerWidth());
 
-                console.log("more1: " + moreWidth)
+                console.log("more1: " + moreWidth);
                 // Calculate the current width of our navigation
-                $( '#top-menu-nav #top-menu > li' ).each( function() {
-                    navWidth += $( this ).outerWidth();
+                $("#top-menu-nav #top-menu > li").each(function () {
+                    navWidth += $(this).outerWidth();
                 });
 
-                if(moreWidth <= 10) {
+                if (moreWidth <= 10) {
                     moreWidth = 80;
                 }
 
                 // Calculate our available space
-                availableSpace =  $('.logo_container').innerWidth() - (moreWidth*2) - $('.logo_container img').outerWidth();
-                
+                availableSpace =
+                    $(".logo_container").innerWidth() -
+                    moreWidth * 2 -
+                    $(".logo_container img").outerWidth();
+
                 // If our nav is wider than our available space, we're going to move items
                 if (navWidth > availableSpace) {
-                    var lastItem = $( '#top-menu-nav #top-menu > li:not(#more-menu)' ).last();
-                    lastItem.attr( 'data-width', lastItem.outerWidth() );
-                    lastItem.prependTo( $( '#more-menu .sub-menu' ).eq( 0 ) );
+                    var lastItem = $(
+                        "#top-menu-nav #top-menu > li:not(#more-menu)"
+                    ).last();
+                    lastItem.attr("data-width", lastItem.outerWidth());
+                    lastItem.prependTo($("#more-menu .sub-menu").eq(0));
                     priorityNav(); // Rerun this function!
 
-                // But if we have the extra space, we should add the items back to our menu
-                } else if (navWidth + firstMoreElement.data( 'width' ) < availableSpace) {
+                    // But if we have the extra space, we should add the items back to our menu
+                } else if (
+                    navWidth + firstMoreElement.data("width") <
+                    availableSpace
+                ) {
                     // Check to be sure there's enough space for our extra element
-                    firstMoreElement.insertBefore( $( '#top-menu-nav #top-menu > li' ).last() );
+                    firstMoreElement.insertBefore(
+                        $("#top-menu-nav #top-menu > li").last()
+                    );
                     priorityNav();
                 }
 
                 // Hide our more-menu entirely if there's nothing in it
-                if ($( '#more-menu li' ).length > 0) {
-                    $( '#more-menu' ).addClass( 'visible' );
+                if ($("#more-menu li").length > 0) {
+                    $("#more-menu").addClass("visible");
                 } else {
-                    $( '#more-menu' ).removeClass( 'visible' );
+                    $("#more-menu").removeClass("visible");
                 }
             } // check for body class
-        }; // function priorityNav
-
+        } // function priorityNav
 
         // Run our functions once the window has loaded fully
-        $( window ).on( 'load', function() {
+        $(window).on("load", function () {
             priorityNav();
         });
 
         // Annnnnd also every time the window resizes
         var isResizing = false;
-        $( window ).on('resize', function() {
+        $(window).on("resize", function () {
             if (isResizing) {
                 return;
             }
 
             isResizing = true;
-            setTimeout(function() {
+            setTimeout(function () {
                 priorityNav();
                 isResizing = false;
             }, 150);
         });
-
-    } )( jQuery );
+    })(jQuery);
 }
