@@ -246,25 +246,20 @@ function getMaxHeight(site_width, className) {
     var j =0;
 
     $(className).each(function () {
-        console.log(className[i])
         $(className[i]).each(function () {
             if (
                 $(this).height() > maxHeight &&
                 window.innerWidth > site_width
             ) {
                 maxHeight = $(this).height();
-                console.log(maxHeight);
             }
             i++;
         });
     });
     $(className).each(function () {
-<<<<<<< HEAD
         $(className[j]).height(maxHeight);
         j++;
-=======
-        $(className[i]).height(maxHeight[i]);
->>>>>>> 226b31b63e2ecdbff49e00f8593126b9b214f726
+
     });
 }
 
