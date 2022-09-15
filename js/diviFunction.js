@@ -242,16 +242,26 @@ $(document).ready(function (e) {
 function getMaxHeight(site_width, className) {
     var maxHeight = 0;
     maxHeight = new Array();
+    var i =0;
+    var j =0;
+
     $(className).each(function () {
+        console.log(className[i])
         $(className[i]).each(function () {
-            if ($(this).height() > maxHeight && window.innerWidth > site_width) {
+            if (
+                $(this).height() > maxHeight &&
+                window.innerWidth > site_width
+            ) {
                 maxHeight = $(this).height();
+                console.log(maxHeight);
             }
+            i++;
         });
-    })
+    });
     $(className).each(function () {
-        $(className[i]).height(maxHeight[i]);
-    })
+        $(className[j]).height(maxHeight);
+        j++;
+    });
 }
 
 // Close Divi mobile menu when clicked outside menu area
