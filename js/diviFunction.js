@@ -242,20 +242,26 @@ $(document).ready(function (e) {
 function getMaxHeight(site_width, className) {
     var maxHeight = 0;
     maxHeight = new Array();
-    var i =0;
-    var j =0;
-
+    var i = 1;
+    var j = 1;
+    var k = 1;
     $(className).each(function () {
         $(className[i]).each(function () {
             if (
                 $(this).height() > maxHeight &&
                 window.innerWidth > site_width
             ) {
-                maxHeight = $(this).height();
+                maxHeight[k] = $(this).height();
             }
-            $(this).height(maxHeight);
             i++;
         });
+        k++
+    });
+    k = 1
+    $(className).each(function () {
+        $(className[j]).height(maxHeight[k]);
+        j++;
+        k++
     });
 }
 
@@ -302,25 +308,26 @@ function focusHoverItem(site_width) {
     });
 }
 
-// priority menu function
-function priorityMenu() {
+// priority menu function 
+// send nav selector and ul selector if not being used in default divi menu
+function priorityMenu(nav_selector = "#top-menu-nav", ul_selecter ="#top-menu") {
+    var combo_selector = nav_selector + " " +  ul_selecter;
     (function ($) {
-        $("#top-menu").append(
+        $(ul_selecter).append(
             '<li id="more-menu" class="menu-item menu-item-has-children"><a href="#"><span class="more-menu-label"></span></a><ul class="sub-menu"></ul></li>'
         );
         // Priority+ navigation, whee!
         function priorityNav() {
             // Make sure we have a menu and that the more-more item is present
-            if (0 < $("#top-menu").length && 0 < $("#more-menu").length) {
+            if (0 < $(ul_selecter).length && 0 < $("#more-menu").length) {
                 var navWidth = 0;
                 var firstMoreElement = $("#more-menu li").first();
 
                 // Calculate the width of our "more" containing element
                 var moreWidth = parseInt($("#more-menu").outerWidth());
 
-                console.log("more1: " + moreWidth);
                 // Calculate the current width of our navigation
-                $("#top-menu-nav #top-menu > li").each(function () {
+                $(combo_selector + " > li").each(function () {
                     navWidth += $(this).outerWidth();
                 });
 
@@ -337,7 +344,7 @@ function priorityMenu() {
                 // If our nav is wider than our available space, we're going to move items
                 if (navWidth > availableSpace) {
                     var lastItem = $(
-                        "#top-menu-nav #top-menu > li:not(#more-menu)"
+                        combo_selector + " > li:not(#more-menu)"
                     ).last();
                     lastItem.attr("data-width", lastItem.outerWidth());
                     lastItem.prependTo($("#more-menu .sub-menu").eq(0));
@@ -350,7 +357,7 @@ function priorityMenu() {
                 ) {
                     // Check to be sure there's enough space for our extra element
                     firstMoreElement.insertBefore(
-                        $("#top-menu-nav #top-menu > li").last()
+                        $(combo_selector + " > li").last()
                     );
                     priorityNav();
                 }
