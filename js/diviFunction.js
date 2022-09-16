@@ -242,9 +242,15 @@ $(document).ready(function (e) {
 function getMaxHeight(site_width, className) {
     var maxHeight = 0;
     maxHeight = new Array();
+<<<<<<< HEAD
     var i = 1;
     var j = 1;
     var k = 1;
+=======
+    var i = 0;
+    var j = 0;
+
+>>>>>>> 1b66ca0369ba01514980b94de1943406e2e1d1c6
     $(className).each(function () {
         $(className[i]).each(function () {
             if (
@@ -326,6 +332,10 @@ function priorityMenu(nav_selector = "#top-menu-nav", ul_selecter ="#top-menu") 
                 // Calculate the width of our "more" containing element
                 var moreWidth = parseInt($("#more-menu").outerWidth());
 
+<<<<<<< HEAD
+=======
+                // console.log("more1: " + moreWidth);
+>>>>>>> 1b66ca0369ba01514980b94de1943406e2e1d1c6
                 // Calculate the current width of our navigation
                 $(combo_selector + " > li").each(function () {
                     navWidth += $(this).outerWidth();
