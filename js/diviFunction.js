@@ -240,22 +240,24 @@ $(document).ready(function (e) {
 
 // Get the max height of an element and apply the height to other elements with the same class
 function getMaxHeight(site_width, className) {
-    var maxHeight = new Array('0');
+    var maxHeight = new Array();
     var i = 1;
     var j = 0;
     var k = 0;
     $(className).each(function (key, val) {
         $(val).each(function () {
-            if ( window.innerWidth > site_width && $(this).height() >= maxHeight[k]) {
-                maxHeight[k] = $(this).height();
+            maxHeight[k] = (maxHeight[k] == undefined)? 0 : maxHeight[k];
+            if (window.innerWidth > site_width && $(this).height() >= maxHeight[k]) {
+                maxHeight[k] = $(this).height();            
             }
             i++;
         });
-        k++;
+
+        k++
     });
     $(className).each(function (key, val) {
         $(val).height(maxHeight[j]);
-        j++;
+        j++; 
     });
 }
 
