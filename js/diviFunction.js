@@ -255,10 +255,12 @@ function getMaxHeight(site_width, className) {
 
         k++
     });
-    $(className).each(function (key, val) {
-        $(val).height(maxHeight[j]);
-        j++; 
-    });
+    if (window.innerWidth > site_width ){
+        $(className).each(function (key, val) {
+            $(val).height(maxHeight[j]);
+            j++; 
+        });
+    }
 }
 
 // Close Divi mobile menu when clicked outside menu area
