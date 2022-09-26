@@ -400,4 +400,3 @@ function transparentHeader() {
     header.classList.add("transparent-header");
     pageContainer.classList.add("pt-0");
 }
-transparentHeader();
