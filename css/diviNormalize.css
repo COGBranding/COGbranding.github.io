@@ -800,3 +800,11 @@ li.menu-item, a.footer__content__item {
     font-size: 0.75rem;
     letter-spacing: -2px;
 }
+
+/* Transparent header */
+#main-header.transparent-header {
+    background-color: transparent;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    transition: all 0.15s ease-in-out;
+}
