@@ -388,3 +388,11 @@ function priorityMenu() {
         });
     })(jQuery);
 }
+
+
+// if divi link module is used, the following function will use it to wrap the selector with a tag allowing preview.
+function divi_link_preview() {
+    et_link_options_data.forEach(function(item){
+        $('.' + item['class']).wrap('<a href="'+ item['url'] +'" target="' + item['target'] + '"></a>');
+    });
+}
