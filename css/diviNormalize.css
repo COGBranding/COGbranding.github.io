@@ -506,6 +506,14 @@
     }
 }
 
+/* Helper classes - padding */
+.pt-0 {
+    padding-top: 0 !important;
+}
+.pb-0 {
+    padding-bottom: 0 !important;
+}
+
 /* Helper classes - position */
 .p-fixed{
     position: fixed !important;
@@ -799,4 +807,16 @@ li.menu-item, a.footer__content__item {
     content: "\5e\5e\5e";
     font-size: 0.75rem;
     letter-spacing: -2px;
+}
+
+/* Transparent header */
+#main-header.transparent-header {
+    background-color: transparent;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    transition: all 0.15s ease-in-out;
+}
+#main-header.transparent-header.et-fixed-header {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
 }

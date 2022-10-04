@@ -246,19 +246,22 @@ function getMaxHeight(site_width, className) {
     var k = 0;
     $(className).each(function (key, val) {
         $(val).each(function () {
-            maxHeight[k] = (maxHeight[k] == undefined)? 0 : maxHeight[k];
-            if (window.innerWidth > site_width && $(this).height() >= maxHeight[k]) {
-                maxHeight[k] = $(this).height();            
+            maxHeight[k] = maxHeight[k] == undefined ? 0 : maxHeight[k];
+            if (
+                window.innerWidth > site_width &&
+                $(this).height() >= maxHeight[k]
+            ) {
+                maxHeight[k] = $(this).height();
             }
             i++;
         });
 
-        k++
+        k++;
     });
-    if (window.innerWidth > site_width ){
+    if (window.innerWidth > site_width) {
         $(className).each(function (key, val) {
             $(val).height(maxHeight[j]);
-            j++; 
+            j++;
         });
     }
 }
@@ -389,6 +392,14 @@ function priorityMenu() {
     })(jQuery);
 }
 
+// Function to make Divi header transparent and remove page container padding
+function transparentHeader() {
+    const header = document.getElementById("main-header");
+    const pageContainer = document.getElementById("page-container");
+
+    header.classList.add("transparent-header");
+    pageContainer.classList.add("pt-0");
+}
 
 // if divi link module is used, the following function will use it to wrap the selector with a tag allowing preview.
 function divi_link_preview() {
