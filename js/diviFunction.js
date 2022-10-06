@@ -9,15 +9,22 @@ $(document).ready(function (e) {
     // open all external links and pdfs on new tabs
     $("a").each(function () {
         var a = new RegExp("/" + window.location.host + "/");
-        if (!a.test(this.href)) {
+        if (!a.test(this.href) && this.href != '') {
             $(this).click(function (event) {
                 event.preventDefault();
                 event.stopPropagation();
                 window.open(this.href, "_blank");
             });
         }
+        if($(this).attr('href') == undefined || $(this).attr('href') == ''){
+            $(this).click(function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+            });
+        }
         $('a[href$=".pdf"]').attr("target", "_blank");
     });
+
 
     //Adds dark background overlay on divi mobile menu open
     var html = '<div id="cog-overlay"></div>';
@@ -423,4 +430,11 @@ function transparentHeader() {
 
     header.classList.add("transparent-header");
     pageContainer.classList.add("pt-0");
+}
+
+// if divi link module is used, the following function will use it to wrap the selector with a tag allowing preview.
+function divi_link_preview() {
+    et_link_options_data.forEach(function(item){
+        $('.' + item['class']).wrap('<a href="'+ item['url'] +'" target="' + item['target'] + '"></a>');
+    });
 }

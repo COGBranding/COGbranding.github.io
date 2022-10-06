@@ -63,9 +63,16 @@ For reference on overriding templates on divi-child theme follow the following l
 
 ## 3. Add three dots to Divi breadcrumbs that are not the home or current page
 
+```
 const childBreadcrumb = document.querySelector(
         ".lwp-breadcrumbs a:not(.home) span[property='name']"
-    );
-    if (childBreadcrumb) {
-        childBreadcrumb.innerHTML = ". . .";
-    }
+);
+if (childBreadcrumb) {
+    childBreadcrumb.innerHTML = ". . .";
+}
+```
+##4. Show link preview when Divi module is linked
+
+```
+divi_link_preview()
+```
