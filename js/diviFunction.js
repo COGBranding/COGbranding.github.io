@@ -9,14 +9,14 @@ $(document).ready(function (e) {
     // open all external links and pdfs on new tabs
     $("a").each(function () {
         var a = new RegExp("/" + window.location.host + "/");
-        if (!a.test(this.href) && this.href != '') {
+        if (!a.test(this.href) && this.href != "") {
             $(this).click(function (event) {
                 event.preventDefault();
                 event.stopPropagation();
                 window.open(this.href, "_blank");
             });
         }
-        if($(this).attr('href') == undefined || $(this).attr('href') == ''){
+        if ($(this).attr("href") == undefined || $(this).attr("href") == "") {
             $(this).click(function (event) {
                 event.preventDefault();
                 event.stopPropagation();
@@ -24,7 +24,6 @@ $(document).ready(function (e) {
         }
         $('a[href$=".pdf"]').attr("target", "_blank");
     });
-
 
     //Adds dark background overlay on divi mobile menu open
     var html = '<div id="cog-overlay"></div>';
@@ -233,30 +232,6 @@ function accordionClose() {
     });
 }
 
-function closeOpenAccordion() {
-    jQuery(function ($) {
-        $(".et_pb_toggle_title").click(function () {
-            var $toggle = $(this).closest(".et_pb_toggle");
-            if (!$toggle.hasClass("et_pb_accordion_toggling")) {
-                var $accordion = $toggle.closest(".et_pb_accordion");
-                if ($toggle.hasClass("et_pb_toggle_open")) {
-                    $accordion.addClass("et_pb_accordion_toggling");
-                    $toggle
-                        .find(".et_pb_toggle_content")
-                        .slideToggle(700, function () {
-                            $toggle
-                                .removeClass("et_pb_toggle_open")
-                                .addClass("et_pb_toggle_close");
-                        });
-                }
-                setTimeout(function () {
-                    $accordion.removeClass("et_pb_accordion_toggling");
-                }, 750);
-            }
-        });
-    });
-}
-
 /* function to remove divi classes from seleted parameters */
 $(document).ready(function (e) {
     $.fn.removeClassStartingWith = function (filter) {
@@ -434,7 +409,9 @@ function transparentHeader() {
 
 // if divi link module is used, the following function will use it to wrap the selector with a tag allowing preview.
 function divi_link_preview() {
-    et_link_options_data.forEach(function(item){
-        $('.' + item['class']).wrap('<a href="'+ item['url'] +'" target="' + item['target'] + '"></a>');
+    et_link_options_data.forEach(function (item) {
+        $("." + item["class"]).wrap(
+            '<a href="' + item["url"] + '" target="' + item["target"] + '"></a>'
+        );
     });
 }
