@@ -1,14 +1,15 @@
 # Code Guide to some functions built with the CDN files
 
 ## 1. To remove Divi class from the tags, call the following function on jquery
+
 "selector" can be just the tag, class or id name
 
-All divi class starts with either 'et_'  or 'et-', the only one making real differences is 'et_' which is under the code below. place the code in custom.js file and make sure jquery and the [/js/diviFunction.js](/js/diviFunction.js) file is loaded before the custom.js file.
+All divi class starts with either 'et*' or 'et-', the only one making real differences is 'et*' which is under the code below. place the code in custom.js file and make sure jquery and the [/js/diviFunction.js](/js/diviFunction.js) file is loaded before the custom.js file.
 
-The function can be used to remove any classes (runs wildcard checking for classes starting with) on any criteria, 
+The function can be used to remove any classes (runs wildcard checking for classes starting with) on any criteria,
 
 ```
-$("selector").removeClassStartingWith('et_'); 
+$("selector").removeClassStartingWith('et_');
 ```
 
 ## 2. CDN For COGBranding Sites.
@@ -71,7 +72,8 @@ if (childBreadcrumb) {
     childBreadcrumb.innerHTML = ". . .";
 }
 ```
-##4. Show link preview when Divi module is linked
+
+## 4. Show link preview when Divi module is linked
 
 ```
 divi_link_preview()
