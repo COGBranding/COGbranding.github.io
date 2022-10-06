@@ -235,11 +235,7 @@ function accordionClose() {
 /* function to remove divi classes from seleted parameters */
 $(document).ready(function (e) {
     $.fn.removeClassStartingWith = function (filter) {
-        $(this).removeClass(function (index, className) {
-            return (
-                className.match(new RegExp("\\S*" + filter + "\\S*", "g")) || []
-            ).join(" ");
-        });
+        $(this).removeClass(function (index, className) { return (className.match(new RegExp("\\S*" + filter + "\\S*", "g")) || []).join(" "); });
         return this;
     };
 });
@@ -289,10 +285,7 @@ function focusHoverItem(site_width) {
                 function () {
                     $("#top-menu .menu-item").not(this).addClass("inactive");
                     $(this).parent().parent().removeClass("inactive");
-                    $(this)
-                        .parent(".sub-menu")
-                        .find("li")
-                        .removeClass("inactive");
+//                     $(this).parent(".sub-menu").find("li").removeClass("inactive");
                 },
                 function () {
                     $("#top-menu .menu-item").not(this).removeClass("inactive");
