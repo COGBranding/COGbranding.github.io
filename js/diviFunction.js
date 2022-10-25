@@ -295,17 +295,10 @@ function focusHoverItem(site_width) {
                 function () {
                     $("#top-menu .menu-item").not(this).addClass("inactive");
                     $(this).parent().parent().removeClass("inactive");
-                    $(this)
-                        .parent(".sub-menu")
-                        .find("li")
-                        .removeClass("inactive");
+                    //                     $(this).parent(".sub-menu").find("li").removeClass("inactive");
                 },
                 function () {
                     $("#top-menu .menu-item").not(this).removeClass("inactive");
-                    $(this)
-                        .parent(".sub-menu")
-                        .find("li")
-                        .removeClass("inactive");
                 }
             );
             $(".account-icon, .cart-icon, .phone-icon").hover(function () {
