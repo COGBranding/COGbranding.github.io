@@ -78,3 +78,13 @@ if (childBreadcrumb) {
 ```
 divi_link_preview()
 ```
+
+## 5. Customise Divi's project slug to a unique slug
+```
+function et_projects_custom_slug( $slug ) {
+    $slug = array( 'slug' => 'custom-slug' );
+    return $slug;
+}
+add_filter( 'et_project_posttype_rewrite_args', 'et_projects_custom_slug', 10, 2 );
+```
+After saving in functions.php, refresh the permalinks in Settings > Permalinks.
