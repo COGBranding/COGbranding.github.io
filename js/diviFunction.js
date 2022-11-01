@@ -423,7 +423,7 @@ function divi_link_preview() {
 function blogHeadingLink(){
     $( ".single-post h2" ).wrap(function() {
         var title = $( this ).text();
-        title = title.replace(/\s+/g, '-').toLowerCase();
+        title = title.replace(/[,.\- ]/g, '-').toLowerCase();
         $(this).attr('id', title);
         return "<a href='#" + title + "'></a>";
       });
