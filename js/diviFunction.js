@@ -251,12 +251,15 @@ $(document).ready(function (e) {
 });
 
 // Get the max height of an element and apply the height to other elements with the same class
-function getMaxHeight(site_width, className) {
+function getMaxHeights(site_width, className) {
     window.onresize = function() {
        var maxHeight = new Array();
         var i = 1;
         var j = 0;
         var k = 0;
+        $(className).each(function (key, val) {
+            $(val).css('height', 'unset');
+        });
         $(className).each(function (key, val) {
             $(val).each(function () {
                 maxHeight[k] = maxHeight[k] == undefined ? 0 : maxHeight[k];
@@ -336,7 +339,6 @@ function priorityMenu() {
                 // Calculate the width of our "more" containing element
                 var moreWidth = parseInt($("#more-menu").outerWidth());
 
-                console.log("more1: " + moreWidth);
                 // Calculate the current width of our navigation
                 $("#top-menu-nav #top-menu > li").each(function () {
                     navWidth += $(this).outerWidth();
