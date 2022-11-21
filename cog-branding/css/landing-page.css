@@ -6,10 +6,15 @@
     --color-green: #39b54a;
     --color-purple: #662484;
     --color-red: #e01f25;
+
+    --font-inter: "Inter", sans-serif;
 }
 
 /* buttons */
 .btn {
+}
+
+.btn:hover {
 }
 
 .btn--orange {
@@ -30,6 +35,23 @@
 
 .btn br {
     display: none;
+}
+
+/* hero section */
+.sec-hero {
+    padding: 80px 0;
+}
+.sec-hero__content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+.sec-hero__content h1 {
+    font-family: var(--font-inter);
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-navy);
 }
 
 /* content section */
