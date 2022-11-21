@@ -25,6 +25,7 @@
     align-items: center;
     justify-content: center;
     max-width: 700px;
+    margin: 0 auto;
 }
 
 /* buttons */
