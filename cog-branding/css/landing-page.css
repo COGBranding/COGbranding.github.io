@@ -77,7 +77,7 @@
     align-items: center;
 }
 .btn--flex * {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 }
 
 /* hero section */
