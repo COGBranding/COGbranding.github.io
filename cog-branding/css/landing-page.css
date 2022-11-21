@@ -26,6 +26,7 @@
     justify-content: center;
     max-width: 700px;
     margin: 0 auto;
+    padding-bottom: 30px;
 }
 
 /* buttons */
@@ -69,6 +70,14 @@
 
 .btn br {
     display: none;
+}
+
+.btn--flex {
+    display: flex;
+    align-items: center;
+}
+.btn--flex * {
+    margin-bottom: 0;
 }
 
 /* hero section */
@@ -157,6 +166,10 @@
     align-items: center;
     justify-content: center;
 }
+.sec-content__icon:not(:last-child) {
+    margin-right: 20px;
+}
+
 .sec-content__icon img {
     height: 48px;
 }
