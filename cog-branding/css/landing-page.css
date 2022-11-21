@@ -7,3 +7,29 @@
     --color-purple: #662484;
     --color-red: #e01f25;
 }
+
+/* buttons */
+.btn {
+}
+
+.btn--orange {
+    background-color: var(--color-orange);
+}
+
+.btn--blue {
+    background-color: var(--blue);
+}
+
+.btn--purple {
+    background-color: var(--color-purple);
+}
+
+.btn--white {
+    background-color: var(--white);
+}
+
+.btn br {
+    display: none;
+}
+
+/* content section */
