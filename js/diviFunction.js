@@ -432,3 +432,59 @@ function blogHeadingLink(){
         return "<a href='#" + title + "'></a>";
       });
 }
+
+// the following function sets the active status on the selected menu, useful for one-page menu sites (works with divi theme)
+function setActiveMenu(){
+    $('ul.et-menu .menu-item a').on('click', function(){
+		$('.menu-item').removeClass('active');
+		$(this).parent().addClass('active');
+	});
+}
+
+// the following is the extension of the above function. this sets the current on screen section as active on the menu
+function scrollActive(selector){
+    if($('#' + selector + ' div').isInViewport()){
+        $('.menu-item').removeClass('active');
+        $('.'+ selector + '-menu').addClass('active');
+    }
+}
+
+
+/*
+The following is an example of how the above scrollActive function should be called. 
+the below is for reference only which shows the method which will sow active status on the correct section based on the direction of scroll
+    var position = $(window).scrollTop(); 
+	$(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if(scroll < position) {
+            scrollActive('who-is-soilco');
+            scrollActive('what-is-fogo');
+            scrollActive('proposal');
+            scrollActive('environment');
+            scrollActive('community-and-education');
+            scrollActive('faq');
+            
+        } else {
+            
+            scrollActive('faq');
+            scrollActive('community-and-education');
+            scrollActive('environment');
+            scrollActive('proposal');
+            scrollActive('what-is-fogo');
+            scrollActive('who-is-soilco');
+
+        }
+        position = scroll;
+    });
+
+*/
+
+// the following section checks if the selector is in the current viewport
+$.fn.isInViewport = function() {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
