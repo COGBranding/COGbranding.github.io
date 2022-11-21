@@ -26,7 +26,12 @@
     justify-content: center;
     max-width: 700px;
     margin: 0 auto;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
+}
+
+.grid-images {
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 
 /* buttons */
@@ -74,10 +79,15 @@
 
 .btn--flex {
     display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
     align-items: center;
 }
 .btn--flex * {
     margin-bottom: 0 !important;
+}
+.btn--flex br {
+    display: none;
 }
 
 /* hero section */
@@ -110,11 +120,12 @@
 }
 
 /* image section */
-.sec-image {
-}
-
 .sec-image.fullwidth {
     padding: 0;
+}
+
+.sec-image.boxed .g1-layout-inner {
+    width: 80% !important;
 }
 
 /* content section */
