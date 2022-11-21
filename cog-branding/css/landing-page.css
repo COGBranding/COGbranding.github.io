@@ -29,6 +29,12 @@
     padding-bottom: 40px;
 }
 
+@media all and (max-width: 767px) {
+    .flex-images {
+        padding-bottom: 30px;
+    }
+}
+
 .grid-images {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -40,7 +46,11 @@
 
 @media all and (max-width: 767px) {
     .grid-images {
-        grid-template-columns: auto auto;
+        display: block;
+    }
+
+    .grid-images__image:not(:last-child) {
+        margin-bottom: 20px;
     }
 }
 
@@ -164,7 +174,7 @@
 
 @media all and (max-width: 767px) {
     .sec-image.boxed .g1-layout-inner {
-        width: 90% !important;
+        width: 95% !important;
     }
 }
 
