@@ -1,6 +1,7 @@
 /* Variables */
 :root {
     --color-navy: #001537;
+    --color-white: #fff;
     --color-orange: #f47920;
     --color-blue: #00aeef;
     --color-green: #39b54a;
@@ -18,25 +19,32 @@
     font-size: 15px;
     font-weight: 500;
     line-height: 1.5;
+    color: var(--white);
 }
 
 .btn:hover {
+    background-image: linear-gradient(rgb(0 0 0 / 5%) 0 0) !important;
 }
 
-.btn--orange {
-    background-color: var(--color-orange);
+.btn--orange,
+.btn--orange:hover {
+    background-color: var(--color-orange) !important;
 }
 
-.btn--blue {
-    background-color: var(--blue);
+.btn--blue,
+.btn--blue:hover {
+    background-color: var(--blue) !important;
 }
 
-.btn--purple {
-    background-color: var(--color-purple);
+.btn--purple,
+.btn--purple:hover {
+    background-color: var(--color-purple) !important;
 }
 
-.btn--white {
-    background-color: var(--white);
+.btn--white,
+.btn--white:hover {
+    color: var(--navy);
+    background-color: var(--white) !important;
 }
 
 .btn br {
@@ -69,7 +77,7 @@
     opacity: 0.75;
 }
 .sec-hero__content .btn {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 /* content section */
