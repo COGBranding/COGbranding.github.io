@@ -401,6 +401,10 @@
     padding-bottom: 30px;
 }
 
+.sec-cards .dropdown {
+    margin-bottom: 30px;
+}
+
 .sec-cards__card {
     background-color: var(--color-white);
     border: 1px solid var(--color-border);
@@ -408,13 +412,16 @@
     padding: 30px;
 }
 .sec-cards__card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 64px;
     height: 64px;
     background-color: var(--color-white);
     border: 1px solid var(--color-border);
     border-radius: 8px;
     box-shadow: var(--shadow-sm);
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
 .sec-cards__card__icon img {
     height: 24px;
