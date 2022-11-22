@@ -393,3 +393,10 @@
 .sec-cards .g1-layout-inner {
     width: 89% !important;
 }
+
+.sec-cards__card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 30px;
+}
