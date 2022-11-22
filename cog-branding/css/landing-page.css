@@ -60,6 +60,9 @@
 .grid-images__image.fullwidth {
     grid-column: span 3;
 }
+.grid-images__image.center {
+    text-align: center;
+}
 
 @media all and (max-width: 767px) {
     .grid-images {
