@@ -275,16 +275,13 @@
     background-color: var(--color-navy);
 }
 .sec-content.dark h2,
+.sec-content.dark h2 a,
 .sec-content.dark h4,
-.sec-content.dark p,
-.sec-content.dark a {
+.sec-content.dark p {
     color: var(--color-white) !important;
 }
 .sec-content.dark p {
     opacity: 1;
-}
-.sec-content.dark .btn-flex a:last-of-type {
-    color: var(--color-navy) !important;
 }
 
 .sec-content .btn--flex {
