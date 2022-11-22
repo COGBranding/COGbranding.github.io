@@ -280,6 +280,9 @@
 .sec-content.dark a {
     color: var(--color-white) !important;
 }
+.sec-content.dark p {
+    opacity: 1;
+}
 
 .sec-content .btn--flex {
     padding-top: 24px;
