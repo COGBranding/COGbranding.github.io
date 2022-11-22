@@ -324,3 +324,8 @@
         height: 40px;
     }
 }
+
+/* dropdown */
+.dropdown__items__list.closed {
+    display: none;
+}
