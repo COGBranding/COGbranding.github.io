@@ -277,7 +277,9 @@
 .sec-content.dark h2,
 .sec-content.dark h2 a,
 .sec-content.dark h4,
-.sec-content.dark p {
+.sec-content.dark p,
+.sec-content.dark ul,
+.sec-content.dark ol {
     color: var(--color-white) !important;
 }
 .sec-content.dark p {
