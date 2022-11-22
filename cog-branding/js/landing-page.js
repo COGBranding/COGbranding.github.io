@@ -7,4 +7,7 @@ function dropdownMenu() {
         dropdownItems.classList.toggle("closed");
     });
 }
-dropdownMenu();
+
+// if (dropdownMenu) {
+//     dropdownMenu();
+// }
