@@ -4,13 +4,13 @@ function dropdownMenu() {
     var dropdownItems = document.querySelector(".dropdown__items__list");
 
     dropdown.addEventListener("click", function (event) {
-        dropdownItems.classList.toggle("closed");
-        event.stopPropagation();
+        dropdownItems.classList.toggle("open");
+        // event.stopPropagation();
     });
 
-    window.addEventListener("click", function () {
-        dropdownItems.classList.add("closed");
-    });
+    // window.addEventListener("click", function () {
+    //     dropdownItems.classList.add("closed");
+    // });
 
     // dropdownItems.addEventListener("click", function (event) {
     //     event.stopPropagation();
