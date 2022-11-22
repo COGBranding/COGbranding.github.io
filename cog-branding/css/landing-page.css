@@ -353,8 +353,11 @@
     transition: all 0.1s ease-in-out;
 }
 .dropdown__field::after {
-    content: "v";
+    content: url("https://www.cogdigital.com.au/wp-content/uploads/2022/11/chevron-down.svg");
     float: right;
+    width: 12px;
+    position: relative;
+    top: -2px;
 }
 
 .dropdown__items__list {
