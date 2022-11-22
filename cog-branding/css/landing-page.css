@@ -361,6 +361,7 @@
 }
 
 .dropdown__items__list {
+    display: none;
     margin-left: 0;
     margin-bottom: 0;
     background-color: var(--color-white);
@@ -370,9 +371,12 @@
     position: absolute;
     overflow: hidden;
 }
-/* .dropdown__items__list.closed {
+.dropdown__items__list.closed {
     display: none;
-} */
+}
+.dropdown__items__list.open {
+    display: block;
+}
 .dropdown__items__list li {
     list-style-type: none;
 }
