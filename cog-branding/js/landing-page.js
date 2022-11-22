@@ -6,6 +6,10 @@ function dropdownMenu() {
     dropdown.addEventListener("click", function () {
         dropdownItems.classList.toggle("closed");
     });
+
+    !dropdown.addEventListener("click", function () {
+        dropdownItems.classList.add("closed");
+    });
 }
 
 if (dropdownMenu) {
