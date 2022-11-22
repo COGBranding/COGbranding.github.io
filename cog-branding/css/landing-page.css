@@ -370,9 +370,9 @@
     position: absolute;
     overflow: hidden;
 }
-.dropdown__items__list.closed {
+/* .dropdown__items__list.closed {
     display: none;
-}
+} */
 .dropdown__items__list li {
     list-style-type: none;
 }
