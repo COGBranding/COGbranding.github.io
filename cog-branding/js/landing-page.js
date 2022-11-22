@@ -20,12 +20,17 @@ function dropdownMenu() {
         event.stopPropagation();
     });
 
-    // window.addEventListener("click", function () {
-    //     dropdownItems.classList.add("closed");
-    // });
-
-    // dropdownItems.addEventListener("click", function (event) {
-    //     event.stopPropagation();
+    // Alternate method
+    // window.addEventListener("click", function (elem) {
+    //     if (elem.path[0].classList.contains("open")) {
+    //         elem.stopPropagation();
+    //     } else if (elem.path[0].classList.contains("dropdown__field")) {
+    //         dropdownItems.classList.remove("closed");
+    //         dropdownItems.classList.add("open");
+    //     } else {
+    //         dropdownItems.classList.add("closed");
+    //         dropdownItems.classList.remove("open");
+    //     }
     // });
 }
 

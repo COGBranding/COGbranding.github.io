@@ -397,10 +397,48 @@
 .sec-cards .g1-layout-inner {
     width: 89% !important;
 }
+.sec-cards .g1-grid:first-of-type {
+    padding-bottom: 30px;
+}
 
 .sec-cards__card {
     background-color: var(--color-white);
     border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: 30px;
+}
+.sec-cards__card__icon {
+    width: 64px;
+    height: 64px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    padding-bottom: 30px;
+}
+.sec-cards__card__icon img {
+    height: 24px;
+}
+.sec-cards__card__content {
+    padding-bottom: 16px;
+}
+.sec-cards__card__content h4 {
+    font-family: var(--font-inter);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--color-navy);
+}
+.sec-cards__card__content p {
+    font-family: var(--font-inter);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-navy);
+    opacity: 0.75;
+}
+.sec-cards__card__cta .btn {
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 0 !important;
 }
