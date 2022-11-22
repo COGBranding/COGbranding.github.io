@@ -358,6 +358,8 @@
 }
 
 .dropdown__items__list {
+    margin-left: 0;
+    margin-bottom: 0;
     background-color: var(--color-white);
     border: 1px solid var(--color-border);
     border-radius: 8px;
@@ -367,8 +369,6 @@
     display: none;
 }
 .dropdown__items__list ul {
-    margin-left: 0;
-    margin-bottom: 0;
     font-family: var(--font-inter);
     font-size: 15px;
     font-weight: 400;
@@ -377,9 +377,12 @@
 .dropdown__items__list li {
     list-style-type: none;
 }
-.dropdown__items__list .dropdown__items__list__item {
+.dropdown__items__list__item {
+    display: block;
     padding: 16px;
     background-color: var(--color-white);
-    background-image: linear-gradient(rgb(0 0 0/ 5%) 0 0);
     width: 100%;
+}
+.dropdown__items__list__item:hover {
+    background-image: linear-gradient(rgb(0 0 0 / 5%) 0 0);
 }
