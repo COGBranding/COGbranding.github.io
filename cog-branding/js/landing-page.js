@@ -8,6 +8,6 @@ function dropdownMenu() {
     });
 }
 
-// if (dropdownMenu) {
-//     dropdownMenu();
-// }
+if (dropdownMenu) {
+    dropdownMenu();
+}
