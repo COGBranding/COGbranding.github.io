@@ -7,7 +7,7 @@ function dropdownMenu() {
         dropdownItems.classList.toggle("closed");
     });
 
-    $(window).click(function () {
+    window.addEventListener("click", function () {
         dropdownItems.classList.add("closed");
     });
 
