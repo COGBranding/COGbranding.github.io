@@ -333,6 +333,7 @@
 /* dropdown */
 .dropdown {
     width: 320px;
+    cursor: pointer;
 }
 .dropdown__field {
     background-color: var(--color-white);
