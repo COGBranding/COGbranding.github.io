@@ -368,12 +368,6 @@
 .dropdown__items__list.closed {
     display: none;
 }
-.dropdown__items__list ul {
-    font-family: var(--font-inter);
-    font-size: 15px;
-    font-weight: 400;
-    color: var(--color-navy);
-}
 .dropdown__items__list li {
     list-style-type: none;
 }
@@ -382,6 +376,10 @@
     padding: 16px;
     background-color: var(--color-white);
     width: 100%;
+    font-family: var(--font-inter);
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color-navy);
 }
 .dropdown__items__list__item:hover {
     background-image: linear-gradient(rgb(0 0 0 / 5%) 0 0);
