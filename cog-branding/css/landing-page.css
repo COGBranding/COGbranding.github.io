@@ -40,6 +40,7 @@
     justify-content: center;
     max-width: 700px;
     margin: 0 auto;
+    gap: 16px;
     padding-bottom: 40px;
 }
 
@@ -252,9 +253,6 @@
     align-items: center;
     justify-content: center;
 }
-.sec-content__icon:not(:last-child) {
-    margin-right: 20px;
-}
 
 .sec-content__icon img {
     height: 48px;
@@ -293,10 +291,6 @@
     .sec-content__icon {
         width: 64px;
         height: 64px;
-    }
-
-    .sec-content__icon:not(:first-child) {
-        margin-right: 16px;
     }
 
     .sec-content__icon img {
