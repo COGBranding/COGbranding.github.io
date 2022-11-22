@@ -8,6 +8,14 @@ function dropdownMenu() {
         // event.stopPropagation();
     });
 
+    window.onclick = function (event) {
+        if (!event.target.matches(".dropdown")) {
+            if (dropdownItems.classList.contains("open")) {
+                dropdownItems.classList.remove("open");
+            }
+        }
+    };
+
     // window.addEventListener("click", function () {
     //     dropdownItems.classList.add("closed");
     // });
