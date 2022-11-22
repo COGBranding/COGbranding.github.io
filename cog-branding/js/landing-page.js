@@ -7,9 +7,7 @@ function dropdownMenu() {
         dropdownItems.classList.toggle("closed");
     });
 
-    // !dropdown.addEventListener("click", function () {
-    //     dropdownItems.classList.add("closed");
-    // });
+    // To-do: When outside is clicked, close the dropdown menu
 }
 
 if (dropdownMenu) {
