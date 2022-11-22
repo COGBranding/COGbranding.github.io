@@ -11,9 +11,9 @@ function dropdownMenu() {
         dropdownItems.classList.add("closed");
     });
 
-    dropdownItems.addEventListener("click", function (event) {
-        event.stopPropagation();
-    });
+    // dropdownItems.addEventListener("click", function (event) {
+    //     event.stopPropagation();
+    // });
 }
 
 if (dropdownMenu) {
