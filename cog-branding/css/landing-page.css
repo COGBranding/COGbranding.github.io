@@ -283,6 +283,9 @@
 .sec-content.dark p {
     opacity: 1;
 }
+.sec-content.dark .btn-flex a:last-of-type {
+    color: var(--color-navy) !important;
+}
 
 .sec-content .btn--flex {
     padding-top: 24px;
