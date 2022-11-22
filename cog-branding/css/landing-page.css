@@ -450,6 +450,9 @@
     color: var(--color-navy);
     opacity: 0.75;
 }
+.sec-cards__card__content br {
+    display: none;
+}
 .sec-cards__card__cta .btn {
     font-size: 14px;
     width: 100%;
