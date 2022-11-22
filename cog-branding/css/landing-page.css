@@ -370,6 +370,7 @@
     box-shadow: var(--shadow-lg);
     position: absolute;
     overflow: hidden;
+    z-index: 1;
 }
 .dropdown__items__list.closed {
     display: none;
