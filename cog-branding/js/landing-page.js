@@ -16,6 +16,10 @@ function dropdownMenu() {
         }
     };
 
+    dropdown.addEventListener("click", function (event) {
+        event.stopPropagation();
+    });
+
     // window.addEventListener("click", function () {
     //     dropdownItems.classList.add("closed");
     // });
