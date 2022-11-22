@@ -233,6 +233,13 @@
     line-height: 1.6;
     color: var(--color-navy);
 }
+.sec-content__content a {
+    color: initial;
+    text-decoration: underline;
+}
+.sec-content__content a:hover {
+    text-decoration: none;
+}
 
 .sec-content__icon {
     background-color: var(--color-white);
