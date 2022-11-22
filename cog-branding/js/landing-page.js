@@ -11,7 +11,7 @@ function dropdownMenu() {
         dropdownItems.classList.add("closed");
     });
 
-    dropdownItems.click(function (event) {
+    dropdownItems.addEventListener("click", function (event) {
         event.stopPropagation();
     });
 }
