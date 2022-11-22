@@ -410,6 +410,12 @@
     border: 1px solid var(--color-border);
     border-radius: 8px;
     padding: 30px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.1s ease-in-out;
+}
+.sec-cards__card:hover {
+    box-shadow: var(--shadow-lg);
+    transition: all 0.1s ease-in-out;
 }
 .sec-cards__card__icon {
     display: flex;
