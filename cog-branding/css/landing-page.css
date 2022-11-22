@@ -15,7 +15,8 @@
 /* fullwidth containers for specific pages */
 .page-id-8063 .g1-layout-inner,
 .page-id-8104 .g1-layout-inner,
-.page-id-8121 .g1-layout-inner {
+.page-id-8121 .g1-layout-inner,
+.page-id-8128 .g1-layout-inner {
     width: 100% !important;
     max-width: 1920px !important;
 }
@@ -26,11 +27,13 @@
 
 /* hide sidebar on specific pages */
 .page-id-8104 #primary,
-.page-id-8121 #primary {
+.page-id-8121 #primary,
+.page-id-8128 #primary {
     width: 100% !important;
 }
 .page-id-8104 .g1-sidebar,
-.page-id-8121 .g1-sidebar {
+.page-id-8121 .g1-sidebar,
+.page-id-8128 .g1-sidebar {
     display: none !important;
 }
 
