@@ -445,7 +445,7 @@
 }
 .sec-cards__card__content p {
     font-family: var(--font-inter);
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1.5;
     color: var(--color-navy);
