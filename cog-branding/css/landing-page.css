@@ -401,7 +401,7 @@
 .sec-cards .g1-layout-inner {
     width: 89% !important;
 }
-.sec-cards .g1-grid:first-of-type {
+.sec-cards .g1-grid:not(:last-of-type) {
     padding-bottom: 30px;
 }
 
