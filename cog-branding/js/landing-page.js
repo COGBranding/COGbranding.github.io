@@ -37,7 +37,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
         // });
     }
 
-    if (dropdown) {
+    var dropdownField = document.querySelector(".dropdown__field");
+
+    if (dropdownField) {
         dropdownMenu();
     }
 
@@ -49,9 +51,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 postButton.innerHTML = "Read more";
             }
         }
+    }
 
-        if (postButton) {
-            updatePostMoreText();
-        }
+    var postButtonText = document.querySelector(".sec-blog__posts .g1-button");
+
+    if (postButtonText) {
+        updatePostMoreText();
     }
 });
