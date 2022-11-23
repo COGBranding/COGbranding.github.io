@@ -275,6 +275,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    top: 0;
+    transition: all 0.15s ease-in-out;
+}
+.sec-content__icon:hover {
+    top: -10px;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.15s ease-in-out;
 }
 
 .sec-content__icon img {
