@@ -414,6 +414,12 @@
     padding-bottom: 30px;
 }
 
+@media all and (max-width: 600px) {
+    .sec-cards .g1-column:not(:last-of-type) {
+        margin-bottom: 30px;
+    }
+}
+
 .sec-cards .dropdown {
     margin-bottom: 30px;
 }
@@ -476,4 +482,9 @@
     .sec-cards__card {
         padding: 24px;
     }
+}
+
+/* blog */
+.sec-blog .g1-layout-inner {
+    width: 89% !important;
 }
