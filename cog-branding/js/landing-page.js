@@ -3,22 +3,24 @@ function dropdownMenu() {
     var dropdown = document.querySelector(".dropdown__field");
     var dropdownItems = document.querySelector(".dropdown__items__list");
 
-    dropdown.addEventListener("click", function (event) {
-        dropdownItems.classList.toggle("open");
-        // event.stopPropagation();
-    });
+    if (dropdown) {
+        dropdown.addEventListener("click", function (event) {
+            dropdownItems.classList.toggle("open");
+            // event.stopPropagation();
+        });
 
-    window.onclick = function (event) {
-        if (!event.target.matches(".dropdown")) {
-            if (dropdownItems.classList.contains("open")) {
-                dropdownItems.classList.remove("open");
+        window.onclick = function (event) {
+            if (!event.target.matches(".dropdown")) {
+                if (dropdownItems.classList.contains("open")) {
+                    dropdownItems.classList.remove("open");
+                }
             }
-        }
-    };
+        };
 
-    dropdown.addEventListener("click", function (event) {
-        event.stopPropagation();
-    });
+        dropdown.addEventListener("click", function (event) {
+            event.stopPropagation();
+        });
+    }
 
     // Alternate method
     // window.addEventListener("click", function (elem) {
@@ -41,8 +43,10 @@ if (dropdown) {
 function updatePostMoreText() {
     var postButton = document.querySelector(".sec-blog__posts .g1-button");
 
-    for (let i = 0; i < postButton.clientHeight; i++) {
-        postButton.innerHTML = "Read more";
+    if (postButton) {
+        for (let i = 0; i < postButton.clientHeight; i++) {
+            postButton.innerHTML = "Read more";
+        }
     }
 
     if (postButton) {
