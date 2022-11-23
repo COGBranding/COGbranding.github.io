@@ -34,7 +34,7 @@ function dropdownMenu() {
     // });
 }
 
-if (dropdownMenu) {
+if (dropdown) {
     dropdownMenu();
 }
 
@@ -45,7 +45,7 @@ function updatePostMoreText() {
         postButton.innerHTML = "Read more";
     }
 
-    if (updatePostMoreText) {
+    if (postButton) {
         updatePostMoreText();
     }
 }
