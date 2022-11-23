@@ -235,7 +235,8 @@
     color: var(--color-navy);
 }
 .sec-content__content h4,
-.sec-content__content h5 {
+.sec-content__content h5,
+.sec-content__content h6 {
     font-family: var(--font-inter);
     font-size: 24px;
     font-weight: 500;
@@ -246,6 +247,10 @@
 }
 .sec-content__content h5 {
     font-size: 20px;
+    text-transform: none !important;
+}
+.sec-content__content h6 {
+    font-size: 18px;
     text-transform: none !important;
 }
 .sec-content__content p:first-of-type {
@@ -342,6 +347,10 @@
 
     .sec-content__content h5 {
         font-size: 18px;
+    }
+
+    .sec-content__content h6 {
+        font-size: 16px;
     }
 
     .sec-content__content p:first-of-type {
