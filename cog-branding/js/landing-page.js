@@ -44,16 +44,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     function updatePostMoreText() {
-        var postButton = document.querySelector(".sec-blog__posts .g1-button");
+        var postButton = document.querySelectorAll(
+            ".sec-blog__posts .g1-button"
+        );
 
         if (postButton) {
-            for (let i = 0; i < postButton.clientHeight; i++) {
+            for (let i = 0; i < postButton.length; i++) {
                 postButton[i].innerHTML = "Read more";
             }
         }
     }
 
-    var postButtonText = document.querySelector(".sec-blog__posts .g1-button");
+    var postButtonText = document.querySelectorAll(
+        ".sec-blog__posts .g1-button"
+    );
 
     if (postButtonText != null && postButtonText != undefined) {
         updatePostMoreText();
