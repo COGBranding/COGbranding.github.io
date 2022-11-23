@@ -1,7 +1,6 @@
 // Dropdown menu
 document.addEventListener("DOMContentLoaded", (event) => {
-    function dropdownMenu() {
-        var dropdown = document.querySelector(".dropdown__field");
+    function dropdownMenu(dropdown) {
         var dropdownItems = document.querySelector(".dropdown__items__list");
 
         if (dropdown) {
@@ -40,14 +39,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
     var dropdownField = document.querySelector(".dropdown__field");
 
     if (dropdownField != null && dropdownField != undefined) {
-        dropdownMenu();
+        dropdownMenu(dropdownField);
     }
 
-    function updatePostMoreText() {
-        var postButton = document.querySelectorAll(
-            ".sec-blog__posts .g1-button"
-        );
-
+    function updatePostMoreText(postButton) {
         if (postButton) {
             for (let i = 0; i < postButton.length; i++) {
                 postButton[i].innerHTML = "Read more";
@@ -60,6 +55,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     );
 
     if (postButtonText != null && postButtonText != undefined) {
-        updatePostMoreText();
+        updatePostMoreText(postButtonText);
     }
 });
