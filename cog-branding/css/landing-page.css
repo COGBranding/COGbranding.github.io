@@ -248,6 +248,7 @@
     line-height: 1.2;
     letter-spacing: -0.02em;
     color: var(--color-navy);
+    padding-bottom: 12px;
 }
 .sec-content__content h4,
 .sec-content__content h5,
@@ -258,7 +259,7 @@
     line-height: 1.5;
     letter-spacing: -0.01em;
     color: var(--color-navy) !important;
-    padding-top: 24px;
+    padding-top: 12px;
 }
 .sec-content__content h5 {
     font-size: 20px;
@@ -452,13 +453,17 @@
 .sec-cards .g1-layout-inner {
     width: 80% !important;
 }
-.sec-cards .g1-grid:not(:last-of-type) {
+.sec-cards .g1-grid {
     padding-bottom: 30px;
 }
 
 @media all and (max-width: 600px) {
+    .sec-cards .g1-grid:last-of-type {
+        padding-bottom: 0;
+    }
+
     .sec-cards .g1-column:not(:last-of-type) {
-        margin-bottom: 30px;
+        margin-bottom: 30px !important;
     }
 }
 
@@ -491,7 +496,7 @@
     margin-bottom: 30px;
 }
 .sec-cards__card__icon img {
-    height: 24px;
+    height: 28px;
 }
 .sec-cards__card__content {
     padding-bottom: 16px;
