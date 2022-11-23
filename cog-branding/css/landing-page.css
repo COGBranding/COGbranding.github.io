@@ -601,6 +601,10 @@
 }
 
 @media all and (max-width: 767px) {
+    .sec-blog .g1-layout-inner {
+        width: 92% !important;
+    }
+
     .sec-blog__posts .g1-collection__item {
         width: 100% !important;
         margin-right: 0 !important;
