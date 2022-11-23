@@ -499,6 +499,7 @@
 }
 .sec-blog__posts img {
     border-radius: 20px;
+    width: 100vw;
 }
 .sec-blog__posts .entry-header h3 {
     font-family: var(--font-inter);
@@ -533,6 +534,7 @@
     display: none;
 }
 .sec-blog__posts .entry-footer .g1-button {
+    width: 100%;
     font-family: var(--font-inter);
     font-size: 14px;
     font-weight: 400;
