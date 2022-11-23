@@ -495,7 +495,8 @@
 }
 .sec-blog__posts .g1-collection__item {
     max-width: 100% !important;
-    width: 33% !important;
+    width: 31% !important;
+    margin-right: 2% !important;
 }
 .sec-blog__posts img {
     border-radius: 20px;
@@ -559,5 +560,6 @@
 @media all and (max-width: 767px) {
     .sec-blog__posts .g1-collection__item {
         width: 100% !important;
+        margin-right: 0 !important;
     }
 }
