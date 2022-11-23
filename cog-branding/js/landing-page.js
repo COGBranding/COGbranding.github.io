@@ -37,3 +37,15 @@ function dropdownMenu() {
 if (dropdownMenu) {
     dropdownMenu();
 }
+
+function updatePostMoreText() {
+    var postButton = document.querySelector(".sec-blog__posts .g1-button");
+
+    for (let i = 0; i < postButton.clientHeight; i++) {
+        postButton.innerHTML = "Read more";
+    }
+
+    if (updatePostMoreText) {
+        updatePostMoreText();
+    }
+}
