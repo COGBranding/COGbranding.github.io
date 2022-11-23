@@ -24,7 +24,8 @@
 .page-id-8228 .g1-layout-inner,
 .page-id-8254 .g1-layout-inner,
 .page-id-8268 .g1-layout-inner,
-.page-id-8274 .g1-layout-inner {
+.page-id-8274 .g1-layout-inner,
+.page-id-8280 .g1-layout-inner {
     width: 100% !important;
     max-width: 1920px !important;
 }
@@ -38,7 +39,8 @@
 .page-id-8228 #primary,
 .page-id-8254 #primary,
 .page-id-8268 #primary,
-.page-id-8274 #primary {
+.page-id-8274 #primary,
+.page-id-8280 #primary {
     width: 100% !important;
 }
 .page-id-8104 .g1-sidebar,
@@ -49,7 +51,8 @@
 .page-id-8228 .g1-sidebar,
 .page-id-8254 .g1-sidebar,
 .page-id-8268 .g1-sidebar,
-.page-id-8274 .g1-sidebar {
+.page-id-8274 .g1-sidebar,
+.page-id-8280 .g1-sidebar {
     display: none !important;
 }
 
