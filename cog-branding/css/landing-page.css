@@ -413,7 +413,7 @@
 
 /* cards */
 .sec-cards .g1-layout-inner {
-    width: 89% !important;
+    width: 80% !important;
 }
 .sec-cards .g1-grid:not(:last-of-type) {
     padding-bottom: 30px;
@@ -491,7 +491,7 @@
 
 /* blog */
 .sec-blog .g1-layout-inner {
-    width: 89% !important;
+    width: 80% !important;
 }
 .sec-blog__posts .g1-collection__item {
     max-width: 100% !important;
