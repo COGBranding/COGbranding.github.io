@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     var dropdownField = document.querySelector(".dropdown__field");
 
-    if (dropdownField) {
+    if (dropdownField != null && dropdownField != undefined) {
         dropdownMenu();
     }
 
@@ -48,14 +48,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
         if (postButton) {
             for (let i = 0; i < postButton.clientHeight; i++) {
-                postButton.innerHTML = "Read more";
+                postButton[i].innerHTML = "Read more";
             }
         }
     }
 
     var postButtonText = document.querySelector(".sec-blog__posts .g1-button");
 
-    if (postButtonText) {
+    if (postButtonText != null && postButtonText != undefined) {
         updatePostMoreText();
     }
 });
