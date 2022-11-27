@@ -785,9 +785,10 @@ p {
         auto-fill,
         [col-start] minmax(330px, 3fr) [col-end]
     );
-    grid-gap: 3rem;
     padding: 50px 0;
     margin-top: 80px;
+    grid-row-gap: 20px;
+    grid-column-gap: 30px;
 }
 
 .single_project_wrapper .digital_logo {
