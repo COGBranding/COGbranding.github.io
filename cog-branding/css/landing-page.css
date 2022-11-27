@@ -791,20 +791,19 @@ p {
 }
 
 .single_project_wrapper .digital_logo {
-    height: 24px;
-    width: 24px;
+    height: 30px;
+    width: 30px;
     position: absolute;
-    margin-top: 8px;
-    margin-left: 8px;
+    margin-top: 16px;
+    margin-left: 16px;
 }
 
 .project_title {
     font-family: "Kanit";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 140%;
-    letter-spacing: -0.02em;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2em;
+    letter-spacing: -0.36px;
     color: #001537;
 }
 
@@ -812,9 +811,9 @@ p {
     margin-bottom: 52px;
 }
 
-.single_project_wrapper .featured_image {
+/* .single_project_wrapper .featured_image {
     background-color: #000;
-}
+} */
 .single_project_wrapper {
     position: relative;
 }
@@ -839,17 +838,17 @@ p {
     border: none;
 }
 .project_overlay::before {
-    content: "View project";
+    content: "VIEW PROJECT";
     color: #fff;
-    text-transform: uppercase;
-    font-family: "Kanit" !important;
+    font-family: "Kanit";
     letter-spacing: 0.1em;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 20px;
+    font-size: 16px;
     transition: all 0.4s;
+    font-weight: 400;
 }
 .single_project_wrapper:hover > .project_overlay {
     opacity: 1;
