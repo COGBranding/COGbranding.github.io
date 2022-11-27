@@ -816,6 +816,7 @@ p {
 } */
 .single_project_wrapper {
     position: relative;
+    margin-bottom: 16px;
 }
 
 .project_overlay {
