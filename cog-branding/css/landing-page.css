@@ -714,7 +714,7 @@ p {
     font-weight: 400;
     line-height: 1.7em;
     letter-spacing: -0.2px;
-    color: #111;
+    color: #001537;
 }
 
 .the-client-contents,
@@ -780,8 +780,12 @@ p {
 .all_projects.projects_wrapper {
     display: grid;
     /*Define our columns */
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-    grid-gap: 2rem;
+    /* grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); */
+    grid-template-columns: repeat(
+        auto-fill,
+        [col-start] minmax(330px, 3fr) [col-end]
+    );
+    grid-gap: 3rem;
     padding: 50px 0;
     margin-top: 80px;
 }
@@ -801,7 +805,7 @@ p {
     font-size: 17px;
     line-height: 140%;
     letter-spacing: -0.02em;
-    color: #111;
+    color: #001537;
 }
 
 .projects_wrapper a {
