@@ -894,3 +894,28 @@ p {
         flex-direction: column-reverse;
     }
 }
+
+@media all and (max-width: 980px) {
+    .all_projects.projects_wrapper {
+        grid-template-columns: repeat(
+            auto-fill,
+            [col-start] minmax(29.666%, 4fr) [col-end]
+        ) !important;
+    }
+}
+@media all and (max-width: 768px) {
+    .all_projects.projects_wrapper {
+        grid-template-columns: repeat(
+            auto-fill,
+            [col-start] minmax(47.25%, 4fr) [col-end]
+        ) !important;
+    }
+}
+@media all and (max-width: 480px) {
+    .all_projects.projects_wrapper {
+        grid-template-columns: repeat(
+            auto-fill,
+            [col-start] minmax(100%, 4fr) [col-end]
+        ) !important;
+    }
+}
