@@ -690,6 +690,7 @@ body.single-our-work h6 {
     font-weight: 400;
     line-height: 1.2em;
     color: #fff;
+    font-family: var(--font-inter) !important;
 }
 
 .what-we-did-contents {
@@ -715,7 +716,7 @@ body.single-our-work h6 {
     font-size: 24px;
     font-weight: 600;
     line-height: 1.3em;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
 }
 .contents-row .text-column p {
     font-size: 18px;
