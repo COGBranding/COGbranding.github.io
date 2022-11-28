@@ -701,10 +701,6 @@ body.single-our-work h6 {
     padding: 27px 0;
 }
 
-.what-we-did-contents .media-with-text col {
-    flex: 1;
-}
-
 .what-we-did-contents .media-with-text .col .title h3,
 .what-we-did-contents .media-with-text .col .title-content h3 {
     font-weight: 600;
@@ -908,6 +904,9 @@ body.single-our-work h6 {
         gap: 20px;
         justify-content: space-between;
         align-items: flex-end;
+    }
+    .what-we-did-contents .media-with-text col {
+        flex: 1;
     }
 }
 @media all and (max-width: 980px) {
