@@ -635,8 +635,14 @@ p {
 .our-work-section {
     padding: 360px 0 20px 0;
 }
+@media only screen and (max-width: 980px) {
+    .our-work-section {
+        padding-top: 160px;
+        padding-bottom: 20px;
+    }
+}
 
-.back-button {
+.et_ .back-button {
     font-size: 14px;
     font-weight: 500;
     color: #fff;
