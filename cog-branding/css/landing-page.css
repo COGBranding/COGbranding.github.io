@@ -905,7 +905,7 @@ body.single-our-work h6 {
         justify-content: space-between;
         align-items: flex-end;
     }
-    .what-we-did-contents .media-with-text col {
+    .what-we-did-contents .media-with-text .col {
         flex: 1;
     }
 }
