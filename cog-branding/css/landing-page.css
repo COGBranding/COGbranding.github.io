@@ -647,6 +647,7 @@ p {
     max-width: fit-content;
     margin-bottom: 30px;
     transition: all 0.3s ease;
+    font-family: "kanit";
 }
 .back-button:hover {
     border: 1px solid rgba(255, 255, 255, 0.25);
