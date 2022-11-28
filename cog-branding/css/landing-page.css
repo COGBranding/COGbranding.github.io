@@ -614,12 +614,12 @@
 }
 
 /** COG Digital our-work single/archive page css**/
-body.single-our-work h1,
-body.single-our-work h2,
-body.single-our-work h3,
-body.single-our-work h4,
-body.single-our-work h5,
-body.single-our-work h6 {
+body.single-our-work .g1-content h1,
+body.single-our-work .g1-content h2,
+body.single-our-work .g1-content h3,
+body.single-our-work .g1-content h4,
+body.single-our-work .g1-content h5,
+body.single-our-work .g1-content h6 {
     font-family: "Kanit" !important;
 }
 .single-our-work .g1-content .g1-layout-inner {
