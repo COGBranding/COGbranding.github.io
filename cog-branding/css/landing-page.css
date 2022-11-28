@@ -619,8 +619,7 @@ body.single-our-work h2,
 body.single-our-work h3,
 body.single-our-work h4,
 body.single-our-work h5,
-body.single-our-work h6,
-p {
+body.single-our-work h6 {
     font-family: "Kanit" !important;
 }
 .single-our-work .g1-content .g1-layout-inner {
