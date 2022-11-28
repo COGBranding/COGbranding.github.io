@@ -708,6 +708,7 @@ body.single-our-work h6 {
     font-size: 28px;
     color: #001537;
     line-height: 1.4em;
+    margin-bottom: 0px !important;
 }
 .contents-row {
     max-width: 80%;
