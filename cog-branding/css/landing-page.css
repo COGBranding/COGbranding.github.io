@@ -724,6 +724,7 @@ body.single-our-work h6 {
     line-height: 1.7em;
     letter-spacing: -0.2px;
     color: #001537;
+    font-family: var(--font-inter) !important;
 }
 
 .the-client-contents,
