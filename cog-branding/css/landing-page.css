@@ -623,7 +623,7 @@ body.single-our-work h6,
 p {
     font-family: "Kanit" !important;
 }
-.single-our-work .g1-layout-inner {
+.single-our-work .g1-content .g1-layout-inner {
     width: 100% !important;
     max-width: 100% !important;
 }
