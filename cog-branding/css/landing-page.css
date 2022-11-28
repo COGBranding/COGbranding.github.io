@@ -701,6 +701,10 @@ body.single-our-work h6 {
     padding: 27px 0;
 }
 
+.what-we-did-contents .media-with-text col {
+    flex: 1;
+}
+
 .what-we-did-contents .media-with-text .col .title,
 .what-we-did-contents .media-with-text .col .title-content h3 {
     font-weight: 600;
