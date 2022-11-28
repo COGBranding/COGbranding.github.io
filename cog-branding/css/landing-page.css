@@ -629,7 +629,8 @@ p {
 }
 
 .single-our-work .g1-precontent,
-.single-our-work .g1-nav-breadcrumbs {
+.single-our-work .g1-nav-breadcrumbs,
+.page-id-8246 .g1-nav-breadcrumbs {
     display: none !important;
 }
 
