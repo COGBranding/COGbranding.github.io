@@ -1,5 +1,7 @@
 console.log("diviFunction is working");
 
+$ = jQuery;
+
 // Current Year HTML
 function currentYear() {
     document.getElementById("year").innerHTML = new Date().getFullYear();
